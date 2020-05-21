@@ -104,7 +104,7 @@ PF00180	Isocitrate/isopropylmalate dehydrogenase
 PF00182	Chitinase class I
 PF00185	Aspartate/ornithine carbamoyltransferase, Asp/Orn binding domain
 PF00186	Dihydrofolate reductase
-# PF00190	Cupin
+PF00190	Cupin
 PF00195	Chalcone and stilbene synthases, N-terminal domain
 PF00198	2-oxoacid dehydrogenases acyltransferase (catalytic domain)
 PF00199	Catalase
@@ -123,7 +123,7 @@ PF00221	Aromatic amino acid lyase
 PF00224	Pyruvate kinase, barrel domain
 # PF00227	Proteasome subunit
 PF00232	Glycosyl hydrolase family 1
-# PF00233	3'5'-cyclic nucleotide phosphodiesterase
+PF00233	3'5'-cyclic nucleotide phosphodiesterase
 PF00239	Resolvase, N terminal domain
 PF00245	Alkaline phosphatase
 PF00246	Zinc carboxypeptidase
@@ -134,7 +134,7 @@ PF00258	Flavodoxin
 PF00264	Common central domain of tyrosinase
 PF00265	Thymidine kinase
 PF00266	Aminotransferase class-V
-# PF00267	Gram-negative porin
+PF00267	Gram-negative porin
 PF00268	Ribonucleotide reductase, small chain
 PF00274	Fructose-bisphosphate aldolase class-I
 PF00275	EPSP synthase (3-phosphoshikimate 1-carboxyvinyltransferase)
@@ -144,7 +144,7 @@ PF00285	Citrate synthase, C-terminal domain
 PF00289	Biotin carboxylase, N-terminal domain
 PF00290	Tryptophan synthase alpha chain
 PF00291	Pyridoxal-phosphate dependent enzyme
-# PF00292	'Paired box' domain
+PF00292	'Paired box' domain
 PF00293	NUDIX domain
 PF00294	pfkB family carbohydrate kinase
 PF00295	Glycosyl hydrolases family 28
