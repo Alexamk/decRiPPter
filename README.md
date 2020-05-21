@@ -6,14 +6,21 @@ Reference:
 Integration of machine learning and pan-genomics expands the biosynthetic landscape of RiPP natural products
 https://biorxiv.org/cgi/content/short/2020.05.19.104752v1
 
+Sample output:
+Streptomyces analysis (1,295 genomes)
+Mild filter:
+http://www.bioinformatics.nl/~medem005/decRiPPter_mild/index.html
+Strict filter:
+http://www.bioinformatics.nl/~medem005/decRiPPter_strict/index.html
+
 Description:
 
 decRiPPter is a genome mining tool for detection of novel biosynthetic gene clusters (BGCs) of ribosomally synthesized and post-translationally modified peptides (RiPPs).
-The tool prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results will not actually be RiPP BGCs. 
-Rather, it functions as a platform for exploration and cluster prioritization, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
+The tool prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. 
+To circumvent this, decRiPPter functions as a platform for exploration and cluster prioritization. It allows for extensive user-defined filtering options of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
 
-If you're more interested in accurate detection of RiPP BGCs of known classes, with a lower amount of novelty, 
-we can refer you to some of the other excellent tools written for that purpose.
+If you're more interested in highly accurate detection of RiPP BGCs, staying within the bounds of known RiPP subclasses, 
+there are some excellent tools written for that purpose.
 For example, see BAGEL4, RODEO, antiSMASH or RiPP-PRISM. 
 
 
