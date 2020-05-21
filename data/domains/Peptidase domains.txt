@@ -1,0 +1,378 @@
+#leave the following line; indicates category name
+peptidase
+
+PF00413 Matrixin
+
+PF00026	Eukaryotic aspartyl protease
+PF00045	Hemopexin
+PF00066	LNR domain
+PF00077	Retroviral aspartyl protease
+PF00082	Subtilase family
+PF00112	Papain family cysteine protease
+PF00246	Zinc carboxypeptidase
+PF00326	Prolyl oligopeptidase family
+PF00413	Matrixin
+PF00450	Serine carboxypeptidase
+PF00548	3C cysteine protease (picornain 3C)
+PF00557	Metallopeptidase family M24
+PF00574	Clp protease
+PF00675	Insulinase (Peptidase family M16)
+PF00716	Assemblin (Peptidase family S21)
+PF00717	Peptidase S24-like
+PF00768	D-alanyl-D-alanine carboxypeptidase
+PF00770	Adenovirus endoprotease
+PF00814	Glycoprotease family
+PF00863	Peptidase family C4
+PF00883	Cytosol aminopeptidase family, catalytic domain
+PF00930	Dipeptidyl peptidase IV (DPP IV) N-terminal region
+PF00944	Alphavirus core protein
+PF00947	Picornavirus core protein 2A
+PF00949	Peptidase S7, Flavivirus NS3 serine protease
+PF01019	Gamma-glutamyltranspeptidase
+PF01088	Ubiquitin carboxyl-terminal hydrolase, family 1
+PF01136	Peptidase family U32
+PF01244	Membrane dipeptidase (Peptidase family M19)
+PF01252	Signal peptidase (SPase) II
+PF01278	Omptin family
+PF01343	Peptidase family S49
+PF01364	Peptidase family C25
+PF01398	JAB1/Mov34/MPN/PAD-1 ubiquitin protease
+PF01400	Astacin (Peptidase family M12A)
+PF01401	Angiotensin-converting enzyme
+PF01421	Reprolysin (M12B) family zinc metalloprotease
+PF01427	D-ala-D-ala dipeptidase
+PF01431	Peptidase family M13
+PF01432	Peptidase family M3
+PF01433	Peptidase family M1
+PF01434	Peptidase family M41
+PF01435	Peptidase family M48
+PF01447	Thermolysin metallopeptidase, catalytic domain
+PF01470	Pyroglutamyl peptidase
+PF01478	Type IV leader peptidase family
+PF01546	Peptidase family M20/M25/M40
+PF01551	Peptidase family M23
+PF01577	Potyvirus P1 protease
+PF01640	Peptidase C10 family
+PF01650	Peptidase C13 family
+PF01694	Rhomboid family
+PF01707	Peptidase family C9
+PF01732	Putative peptidase (DUF31)
+PF01742	Clostridial neurotoxin zinc protease
+PF01750	Hydrogenase maturation protease
+PF01752	Collagenase
+PF01768	Birnavirus VP4 protein
+PF01828	Peptidase A4 family
+PF01829	Peptidase A6 family
+PF01830	Peptidase C7 family
+PF01831	Peptidase C16 family
+PF01841	Transglutaminase-like superfamily
+PF01863	Protein of unknown function DUF45
+PF01965	DJ-1/PfpI family
+PF01972	Serine dehydrogenase proteinase
+PF02016	LD-carboxypeptidase
+PF02031	Streptomyces extracellular neutral proteinase (M7) family
+PF02073	Thermophilic metalloprotease (M29)
+PF02074	Carboxypeptidase Taq (M32) metallopeptidase
+PF02102	Deuterolysin metalloprotease (M35) family
+PF02113	D-Ala-D-Ala carboxypeptidase 3 (S13) family
+PF02122	Peptidase S39
+PF02127	Aminopeptidase I zinc metalloprotease (M18)
+PF02128	Fungalysin metallopeptidase (M36)
+PF02129	X-Pro dipeptidyl-peptidase (S15 family)
+PF02160	Cauliflower mosaic virus peptidase (A3)
+PF02163	Peptidase family M50
+PF02190	ATP-dependent protease La (LON) substrate-binding domain
+PF02225	PA domain
+PF02244	Carboxypeptidase activation peptide
+PF02338	OTU-like cysteine protease
+PF02395	Immunoglobulin A1 protease
+PF02517	CAAX protease self-immunity
+PF02557	D-alanyl-D-alanine carboxypeptidase
+PF02586	SOS response associated peptidase (SRAP)
+PF02617	ATP-dependent Clp protease adaptor protein ClpS
+PF02789	Cytosol aminopeptidase family, N-terminal domain
+PF02868	Thermolysin metallopeptidase, alpha-helical domain
+PF02897	Prolyl oligopeptidase, N-terminal beta-propeller domain
+PF02902	Ulp1 protease family, C-terminal catalytic domain
+PF02907	Hepatitis C virus NS3 protease
+PF02983	Alpha-lytic protease prodomain
+PF03051	Peptidase C1-like family
+PF03290	Vaccinia virus I7 processing peptidase
+PF03410	Metallopeptidase from vaccinia pox
+PF03411	Penicillin-insensitive murein endopeptidase
+PF03412	Peptidase C39 family
+PF03413	Peptidase propeptide and YPEB domain
+PF03415	Clostripain family
+PF03416	Peptidase family C54
+PF03418	Germination protease
+PF03419	Sporulation factor SpoIIGA
+PF03420	Prohead core protein serine protease
+PF03510	2C endopeptidase (C24) cysteine protease family
+PF03539	Spumavirus aspartic protease (A9)
+PF03566	Peptidase family A21
+PF03568	Peptidase family C50
+PF03569	Peptidase family C8
+PF03571	Peptidase family M49
+PF03572	Peptidase family S41
+PF03574	Peptidase family S48
+PF03575	Peptidase family S51
+PF03576	Peptidase family S58
+PF03577	Peptidase family C69
+PF03734	L,D-transpeptidase catalytic domain
+PF03761	Chymotrypsin family Peptidase-S1
+PF03785	Peptidase family C25, C terminal ig-like domain
+PF04096	Nucleoporin autopeptidase
+PF04151	Bacterial pre-peptidase C-terminal domain
+PF04203	Sortase family
+PF04228	Putative neutral zinc metallopeptidase
+PF04258	Signal peptide peptidase
+PF04298	Putative neutral zinc metallopeptidase
+PF04327	Cysteine protease Prp
+PF04389	Peptidase family M28
+PF04450	Peptidase of plants and bacteria
+PF04586	Caudovirus prohead serine protease
+PF04951	D-aminopeptidase
+PF05134	Type II secretion system (T2SS), protein L
+PF05193	Peptidase M16 inactive domain
+PF05195	Aminopeptidase P, N-terminal domain
+PF05223	NTF2-like N-terminal transpeptidase domain
+PF05299	M61 glycyl aminopeptidase
+PF05317	Thermopsin
+PF05342	M26 IgA1-specific Metallo-endopeptidase N-terminal region
+PF05343	M42 glutamyl aminopeptidase
+PF05362	Lon protease (S16) C-terminal proteolytic domain
+PF05379	Carlavirus endopeptidase
+PF05380	Pao retrotransposon peptidase
+PF05381	Tymovirus endopeptidase
+PF05388	Carboxypeptidase Y pro-peptide
+PF05407	Rubella virus endopeptidase
+PF05408	Foot-and-mouth virus L-proteinase
+PF05409	Coronavirus  endopeptidase C30
+PF05410	Porcine arterivirus-type cysteine proteinase alpha
+PF05411	Equine arteritis virus putative proteinase
+PF05412	Equine arterivirus Nsp2-type cysteine proteinase
+PF05413	Putative closterovirus papain-like endopeptidase
+PF05415	Beet necrotic yellow vein furovirus-type papain-like endopeptidase
+PF05416	Southampton virus-type processing peptidase
+PF05417	Hepatitis E cysteine protease
+PF05450	Nicastrin
+PF05497	Destabilase
+PF05533	Beet yellows virus-type papain-like endopeptidase C42
+PF05543	Staphopain peptidase C47
+PF05548	Gametolysin peptidase M11
+PF05550	Pestivirus Npro endopeptidase C53
+PF05569	BlaR1 peptidase M56
+PF05572	Pregnancy-associated plasma protein-A
+PF05576	PS-10 peptidase S37
+PF05577	Serine carboxypeptidase S28
+PF05578	Pestivirus NS3 polyprotein peptidase S31
+PF05579	Equine arteritis virus serine endopeptidase S32
+PF05580	SpoIVB peptidase S55
+PF05582	YabG peptidase U57
+PF05585	Putative peptidase (DUF1758)
+PF05618	Putative ATP-dependant zinc protease
+PF05649	Peptidase family M13
+PF05903	PPPDE putative peptidase domain
+PF05929	Phage capsid scaffolding protein (GPO) serine peptidase
+PF06035	Bacterial transglutaminase-like cysteine proteinase BTLCP
+PF06167	Glucose-regulated metallo-peptidase M90
+PF06262	Zinicin-like metallopeptidase
+PF06280	Fn3-like domain
+PF06337	DUSP domain
+PF06480	FtsH Extracellular
+PF06550	Signal-peptide peptidase, presenilin aspartyl protease
+PF06605	Prophage endopeptidase tail
+PF06645	Microsomal signal peptidase 12 kDa subunit (SPC12)
+PF06689	ClpX C4-type zinc finger
+PF06703	Microsomal signal peptidase 25 kDa subunit (SPC25)
+PF06750	Bacterial Peptidase A24 N-terminal domain
+PF06819	Archaeal Peptidase A24 C-terminal Domain
+PF06847	Archaeal Peptidase A24 C-terminus Type II
+PF07230	Bacteriophage T4-like capsid assembly protein (Gp20)
+PF07364	Metallopeptidase family M81
+PF07501	G5 domain
+PF07580	M26 IgA1-specific Metallo-endopeptidase C-terminal region
+PF07581	The GLUG motif
+PF07591	Pretoxin HINT domain
+PF07722	Peptidase C26
+PF07910	Peptidase family C78
+PF07930	D-aminopeptidase, domain B
+PF07998	Peptidase family M54
+PF08127	Peptidase family C1 propeptide
+PF08192	Peptidase family S64
+PF08284	Retroviral aspartyl protease
+PF08291	Peptidase M15
+PF08325	WLM domain
+PF08367	Peptidase M16C associated
+#PF08386	TAP-like protein
+PF08439	Oligopeptidase F
+PF08453	Peptidase family M9 N-terminal
+PF08496	Peptidase family S49 N-terminal
+PF08548	Peptidase M10 serralysin C terminal
+PF08686	PLAC (protease and lacunin) domain
+PF08715	Papain like viral protease
+PF08773	Cathepsin C exclusion domain
+PF08795	Putative papain-like cysteine peptidase (DUF1796)
+PF09168	X-Prolyl dipeptidyl aminopeptidase PepX, N-terminal
+PF09375	Imelysin
+PF09471	IgA Peptidase M64
+PF09668	Aspartyl protease
+PF09768	Peptidase M76 family
+PF10023	Putative aminopeptidase
+PF10026	Predicted Zn-dependent protease (DUF2268)
+PF10086	Putative membrane peptidase family (DUF2324)
+PF10103	Zinicin-like metallopeptidase
+PF10263	SprT-like family
+PF10275	Peptidase C65 Otubain
+PF10459	Peptidase S46
+PF10460	Peptidase M30
+PF10461	Peptidase S68
+PF10462	Peptidase M66
+PF10463	Peptidase U49
+PF10464	Peptidase U40
+PF10502	Signal peptidase, peptidase S26
+PF11667	Putative zincin peptidase
+PF11713	Peptidase C80 family
+PF11814	Peptidase_C39 like family
+PF11818	C-terminal domain of tail specific protease (DUF3340)
+PF11838	ERAP1-like C-terminal domain
+PF11918	N-terminal domain of Peptidase_S41 in eukaryotic IRBP
+PF11962	Peptidase_G2, IMC autoproteolytic cleavage domain
+PF12044	Putative peptidase family
+PF12122	Cytoplasmic N-terminal domain of rhomboid serine protease
+PF12146	Serine aminopeptidase, S33
+PF12380	Gill-associated viral 3C-like peptidase
+PF12381	Tungro spherical virus-type peptidase
+PF12382	Retrotransposon peptidase
+PF12384	Ty3 transposon peptidase
+PF12385	Papain-like cysteine protease AvrRpt2
+PF12386	Pseudomurein endo-isopeptidase Pei
+PF12387	Pestivirus NS2 peptidase
+PF12388	Dual-action HEIGH metallo-peptidase
+PF12389	Camelysin metallo-endopeptidase
+PF12404	Peptidase
+PF12436	ICP0-binding domain of Ubiquitin-specific protease 7
+PF12528	Type II secretion prepilin peptidase dependent protein C
+PF12580	Tripeptidyl peptidase II
+PF12583	Tripeptidyl peptidase II N terminal
+PF12595	Rhomboid serine protease
+PF12770	CHAT domain
+PF13203	Putative metallopeptidase domain
+PF13337	Putative ATP-dependent Lon protease
+PF13365	Trypsin-like peptidase domain
+PF13367	Protease prsW family
+PF13398	Peptidase M50B-like
+PF13402	Peptidase M60, enhancin and enhancin-like
+PF13485	Peptidase MA superfamily
+PF13529	Peptidase_C39 like family
+PF13539	D-alanyl-D-alanine carboxypeptidase
+PF13574	Metallo-peptidase family M12B Reprolysin-like
+PF13582	Metallo-peptidase family M12B Reprolysin-like
+PF13583	Metallo-peptidase family M12B Reprolysin-like
+PF13611	Serine peptidase of plant viral polyprotein, P1
+PF13620	Carboxypeptidase regulatory-like domain
+PF13645	L,D-transpeptidase catalytic domain
+PF13650	Aspartyl protease
+PF13670	Peptidase propeptide and YPEB domain
+PF13678	NFkB-p65-degrading zinc protease
+PF13688	Metallo-peptidase family M12
+PF13933	Putative peptidase family
+PF13975	gag-polyprotein putative aspartyl protease
+PF14247	Putative metallopeptidase
+PF14521	Lysine-specific metallo-endopeptidase
+PF14533	Ubiquitin-specific protease C-terminal
+PF14538	Raptor N-terminal CASPase like domain
+PF14550	Putative phage serine protease XkdF
+PF14684	Tricorn protease C1 domain
+PF14685	Tricorn protease PDZ domain
+PF14756	Peptidase_C33-associated domain
+PF14826	FACT complex subunit SPT16 N-terminal lobe domain
+PF14891	Effector protein
+PF15499	Ubiquitin-specific peptidase-like, SUMO isopeptidase
+PF15638	Metallopeptidase toxin 2
+PF15639	Metallopeptidase toxin 3
+PF15640	Metallopeptidase toxin 4
+PF15641	Metallopeptidase toxin 5
+PF15644	Papain fold toxin 1, glutamine deamidase
+PF15656	Toxin with a H, D/N and C signature
+PF15887	Putative zinc-binding metallo-peptidase
+PF15890	Putative zinc-binding metallo-peptidase
+PF16030	Serine protease gd N-terminus
+PF16187	Middle or third domain of peptidase_M16
+PF16188	C-terminal region of peptidase_M24
+PF16217	Peptidase M64 N-terminus
+PF16218	Peptidase family C101
+PF16313	Met-zincin
+PF16325	Peptidase family U32 C-terminal domain
+PF16361	N-terminal of Subtilase family
+PF16470	Peptidase S8 pro-domain
+PF16491	CAAX prenyl protease N-terminal, five membrane helices
+PF16733	Rhomboid N-terminal domain
+PF17033	Carboxypeptidase controlling helical cell shape catalytic
+PF17129	C-terminal domain of metallo-carboxypeptidase
+PF17130	beta-barrel domain of carboxypeptidase M99
+TIGR00054	RIP metalloprotease RseP
+TIGR00072	hydrogenase maturation protease
+TIGR00077	signal peptidase II
+TIGR00142	hydrogenase maturation peptidase HycI
+TIGR00181	oligoendopeptidase F
+TIGR00225	C-terminal processing peptidase
+TIGR00329	metallohydrolase, glycoprotease/Kae1 family
+TIGR00382	ATP-dependent Clp protease, ATP-binding subunit ClpX
+TIGR00390	ATP-dependent protease HslVU, ATPase subunit
+TIGR00493	ATP-dependent Clp endopeptidase, proteolytic subunit ClpP
+TIGR00500	methionine aminopeptidase, type I
+TIGR00501	methionine aminopeptidase, type II
+TIGR00504	pyroglutamyl-peptidase I
+TIGR00666	D-alanyl-D-alanine carboxypeptidase/D-alanyl-D-alanine-endopeptidase
+TIGR00705	signal peptide peptidase SppA, 67K type
+TIGR00706	signal peptide peptidase SppA, 36K type
+TIGR00763	endopeptidase La
+TIGR00764	putative ATP-dependent protease
+TIGR01241	ATP-dependent metallopeptidase HflB
+TIGR01249	prolyl aminopeptidase
+TIGR01250	proline-specific peptidase
+TIGR01382	intracellular protease, PfpI family
+TIGR01441	GPR endopeptidase
+TIGR01543	phage prohead protease, HK97 family
+TIGR01586	cysteine protease domain, YopT-type
+TIGR01882	peptidase T
+TIGR01883	peptidase T-like protein
+TIGR01886	dipeptidase PepV
+TIGR01887	putative dipeptidase
+TIGR01893	Xaa-His dipeptidase
+TIGR01910	peptidase, ArgE/DapE family
+TIGR01975	beta-aspartyl peptidase
+TIGR02037	peptidase Do
+TIGR02038	periplasmic serine peptidase DegS
+TIGR02219	putative phage cell wall peptidase, NlpC/P60 family
+TIGR02227	signal peptidase I
+TIGR02228	signal peptidase I
+TIGR02281	clan AA aspartic protease, TIGR02281 family
+TIGR02289	oligoendopeptidase, M3 family
+TIGR02290	oligoendopeptidase, pepF/M3 family
+TIGR02411	leukotriene A-4 hydrolase/aminopeptidase
+TIGR02412	aminopeptidase N
+TIGR02414	aminopeptidase N
+TIGR02639	ATP-dependent Clp protease ATP-binding subunit ClpA
+TIGR02754	nickel-type superoxide dismutase maturation protease
+TIGR02771	conjugative transfer signal peptidase TraF
+TIGR02854	sigma-E processing peptidase SpoIIGA
+TIGR02855	sporulation peptidase YabG
+TIGR02902	ATP-dependent protease LonB
+TIGR02903	ATP-dependent protease, Lon family
+TIGR03008	CAAX prenyl protease-related protein
+TIGR03106	hydrolase, peptidase M42 family
+TIGR03107	glutamyl aminopeptidase
+TIGR03296	M6 family metalloprotease domain
+TIGR03633	proteasome endopeptidase complex, archaeal, alpha subunit
+TIGR03634	proteasome endopeptidase complex, archaeal, beta subunit
+TIGR03692	ATP-dependent protease HslVU, peptidase subunit
+TIGR03698	clan AA aspartic protease, AF_0612 family
+TIGR03796	NHLM bacteriocin system ABC transporter, peptidase/ATP-binding protein
+TIGR03867	MprA protease C-terminal rhombosortase-interaction domain
+TIGR03895	cyanobactin maturation protease, PatA/PatG family
+TIGR03900	putative carboxyl-terminal-processing protease, deltaproteobacterial
+TIGR03921	type VII secretion-associated serine protease mycosin
+TIGR04162	exosortase E/protease, VPEID-CTERM system
+TIGR04239	rhomboid family protease GlpG

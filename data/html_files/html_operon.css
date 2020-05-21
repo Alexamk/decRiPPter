@@ -1,0 +1,87 @@
+div {
+    padding: 10px
+}
+
+div.legend {
+    width:175px; 
+    height:60px; 
+    float:left;
+    padding:2px;
+}
+
+div.domains {
+    padding: 0px;
+    margin: 0px;
+}
+
+div.info {
+    padding: 0px;
+    margin: 0px;
+}
+
+svg.legend {
+    height:59px; 
+    width:60px; 
+    float:left;
+}
+
+caption {
+    font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.collapsible {
+    background-color: #2058b2;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    width: 55%;
+    border: #2058b2;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    margin: 1%;
+}
+
+.active, .collapsible:hover {
+    background-color: #0d1d35;
+}
+
+.content {
+    padding: 20px;
+    display: none;
+    overflow: auto;
+    height: 100px;
+    background-color: #f1f1f1;
+    font-size: 12px;
+    text-align: left;
+    font-family: "Courier New","Lucida Console";
+}
+
+.precursors {
+    padding: 20px;
+    display: none;
+    overflow: auto;
+    width: 55%;
+    background-color: #f1f1f1;
+    border: #f1f1f1;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    font-family: "Times New Roman",Times;
+}
+
+tspan.cysteine {
+  color: #dc143c;
+  font-weight: bold;
+}
+
+tspan.hydroxyl {
+  color: #006400;
+  font-weight: bold;
+}

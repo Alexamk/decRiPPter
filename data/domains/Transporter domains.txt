@@ -1,0 +1,287 @@
+#leave the following line; indicates category name
+transporter
+
+PF08386 TAP-like protein
+
+PF07690 MFS
+PF05108 Type VII secretion system component
+PF11203 Type VII secretion system component
+TIGR03923   type VII secretion protein EccE
+PF00482 Type II secretion system (T2SS), protein F
+PF05157 Type II secretion system (T2SS), protein E, N-terminal domain
+PF00437 Type II/IV secretion system protein
+PF00528 Binding-protein-dependent transport system inner membrane component
+TIGR01189   heme ABC exporter, ATP-binding protein CcmA EC:3.6.3.41
+PF05025 RbsD / FucU transport protein family EC:5
+PF00361 Proton-conducting membrane transporter
+
+
+PF00005	ABC transporter
+PF00664	ABC transporter transmembrane region
+PF00854	POT family
+PF01061	ABC-2 type transporter
+PF01490	Transmembrane amino acid transporter protein
+PF02653	Branched-chain amino acid transport system / permease component
+PF03169	OPT oligopeptide transporter protein
+PF03547	Membrane transport protein
+PF04392	ABC transporter substrate binding protein
+PF05975	Bacterial ABC transporter protein EcsB
+PF06182	ABC-2 family transporter protein
+PF06472	ABC transporter transmembrane region 2
+PF08352	Oligopeptide/dipeptide transporter, C-terminal region
+PF08370	Plant PDR ABC transporter associated
+PF08403	Amino acid permease N-terminal
+PF12399	Branched-chain amino acid ATP-binding cassette transporter
+PF12679	ABC-2 family transporter protein
+PF12698	ABC-2 family transporter protein
+PF12730	ABC-2 family transporter protein
+PF12822	ECF transporter, substrate-specific component
+PF12832	MFS_1 like family
+PF12848	ABC transporter
+PF12911	N-terminal TM domain of oligopeptide transport permease C
+PF13346	ABC-2 family transporter protein
+PF13536	Multidrug resistance efflux transporter
+PF13748	ABC transporter transmembrane region
+PF14510	ABC-transporter extracellular N-terminal
+TIGR00025	ABC transporter efflux protein, DrrB family
+TIGR00056	ABC transport permease subunit
+TIGR00345	transport-energizing ATPase, TRC40/GET3/ArsA family
+TIGR00383	magnesium and cobalt transport protein CorA
+TIGR00400	magnesium transporter
+TIGR00437	ferrous iron transport protein B
+TIGR00637	ModE molybdate transport repressor domain
+TIGR00680	K+-transporting ATPase, A subunit
+TIGR00681	K+-transporting ATPase, C subunit
+TIGR00704	Na/Pi-cotransporter II-related protein
+TIGR00710	drug resistance transporter, Bcr/CflA subfamily
+TIGR00711	drug resistance MFS transporter, drug:H+ antiporter-2 (14 Spanner) (DHA2) family
+TIGR00712	glycerol-3-phosphate transporter
+TIGR00727	small oligopeptide transporter, OPT family
+TIGR00728	oligopeptide transporter, OPT superfamily
+TIGR00733	oligopeptide transporter, OPT family
+TIGR00750	LAO/AO transport system ATPase
+TIGR00770	transporter, anaerobic C4-dicarboxylate uptake (Dcu) family
+TIGR00771	transporter, anaerobic C4-dicarboxylate uptake C (DcuC) family
+TIGR00779	cadmium resistance transporter family protein
+TIGR00784	citrate transporter
+TIGR00785	transporter, divalent anion:Na+ symporter (DASS) family
+TIGR00786	TRAP transporter, DctM subunit
+TIGR00787	TRAP transporter solute receptor, DctP family
+TIGR00788	folate/biopterin transporter
+TIGR00790	formate/nitrite transporter
+TIGR00791	transporter, gluconate:H+ symporter (GntP) family
+TIGR00792	sugar (Glycoside-Pentoside-Hexuronide) transporter
+TIGR00793	2-keto-3-deoxygluconate transporter
+TIGR00795	transporter, lactate permease (LctP) family
+TIGR00796	branched-chain amino acid transport system II carrier protein
+TIGR00799	Golgi 4-transmembrane spanning transporter
+TIGR00800	NCS1 nucleoside transporter family
+TIGR00802	transition metal uptake transporter, Ni2+-Co2+ transporter (NiCoT) family
+TIGR00803	UDP-galactose transporter
+TIGR00804	nucleoside transporter, NupC family
+TIGR00805	sodium-independent organic anion transporter
+TIGR00807	malonate transporter, MadL subunit
+TIGR00808	malonate transporter, MadM subunit
+TIGR00811	silicon transporter
+TIGR00813	transporter, solute:sodium symporter (SSS) family
+TIGR00814	serine transporter
+TIGR00816	C4-dicarboxylate transporter/malic acid transport protein
+TIGR00819	AbgT transporter family
+TIGR00820	ZIP zinc/iron transport family
+TIGR00833	transport protein
+TIGR00836	ammonium transporter
+TIGR00837	aromatic amino acid transport protein
+TIGR00841	bile acid transporter
+TIGR00842	transporter, betaine/carnitine/choline transporter (BCCT) family
+TIGR00843	benzoate transporter
+TIGR00859	sodium channel transporter
+TIGR00860	cation transporter family protein
+TIGR00863	cation transporter protein
+TIGR00879	MFS transporter, sugar porter (SP) family
+TIGR00881	phosphoglycerate transporter family protein
+TIGR00883	MFS transporter, metabolite:H+ symporter (MHS) family protein
+TIGR00886	nitrite transporter
+TIGR00889	nucleoside transporter
+TIGR00890	oxalate/formate antiporter family transporter
+TIGR00891	MFS transporter, sialate:H+ symporter (SHS) family
+TIGR00892	monocarboxylate transporter
+TIGR00893	D-galactonate transporter
+TIGR00894	Na(+)-dependent inorganic phosphate cotransporter
+TIGR00895	MFS transporter, aromatic acid:H+ symporter (AAHS) family
+TIGR00896	cyanate transporter
+TIGR00898	cation transport protein
+TIGR00899	sugar efflux transporter
+TIGR00902	MFS transporter, phenyl propionate permease (PPP) family
+TIGR00905	transporter, basic amino acid/polyamine antiporter (APA) family
+TIGR00906	cationic amino acid transport permease
+TIGR00909	amino acid transporter
+TIGR00911	L-type amino acid transporter
+TIGR00914	heavy metal efflux pump, CzcA family
+TIGR00915	RND transporter, hydrophobe/amphiphile efflux-1 (HAE1) family
+TIGR00921	efflux transporter, putative, hydrophobe/amphiphile efflux-3 (HAE3) family
+TIGR00924	amino acid/peptide transporter (Peptide:H+ symporter)
+TIGR00926	oligopeptide transporter, peptide:H+ symporter
+TIGR00930	K-Cl cotransporter
+TIGR00932	transporter, monovalent cation:proton antiporter-2 (CPA2) family
+TIGR00935	arsenite/antimonite efflux pump membrane protein
+TIGR00937	chromate efflux transporter
+TIGR00947	putative bicarbonate transporter, IctB family
+TIGR00950	carboxylate/amino acid/amine transporter
+TIGR00954	peroxysomal long chain fatty acyl transporter
+TIGR00958	antigen peptide transporter 2
+TIGR00968	sulfate ABC transporter, ATP-binding protein
+TIGR00969	sulfate ABC transporter, permease protein
+TIGR00971	sulfate ABC transporter, sulfate-binding protein
+TIGR00972	phosphate ABC transporter, ATP-binding protein
+TIGR00974	phosphate ABC transporter, permease protein PstA
+TIGR00975	phosphate ABC transporter, phosphate-binding protein PstS
+TIGR00998	efflux pump membrane protein
+TIGR01005	exopolysaccharide transport protein family
+TIGR01013	sodium-dependent inorganic phosphate (Pi) transporter
+TIGR01097	phosphonate ABC transporter, permease protein PhnE
+TIGR01098	phosphate/phosphite/phosphonate ABC transporter, periplasmic binding protein
+TIGR01109	sodium ion-translocating decarboxylase, beta subunit
+TIGR01165	cobalt transport protein
+TIGR01166	cobalt ABC transporter, ATP-binding protein
+TIGR01183	nitrate ABC transporter, permease protein
+TIGR01184	nitrate ABC transporter, ATP-binding proteins C and D
+TIGR01186	glycine betaine/L-proline transport ATP binding subunit
+TIGR01187	polyamine ABC transporter, ATP-binding protein
+TIGR01188	daunorubicin resistance ABC transporter, ATP-binding protein
+TIGR01193	ABC-type bacteriocin transporter
+TIGR01194	cyclic peptide transporter
+TIGR01195	sodium pump decarboxylases, gamma subunit
+TIGR01197	metal ion transporter, metal ion (Mn2+/Fe2+) transporter (Nramp) family
+TIGR01247	daunorubicin resistance ABC transporter membrane protein
+TIGR01253	thiamine/thiamine pyrophosphate ABC transporter, permease protein
+TIGR01254	ABC transporter periplasmic binding protein, thiB subfamily
+TIGR01256	molybdate ABC transporter, periplasmic molybdate-binding protein
+TIGR01257	rim ABC transporter
+TIGR01272	glucose/galactose transporter WARNING
+TIGR01276	thiamin/thiamin pyrophosphate ABC transporter, thiamin/thiamin pyrophospate-binding protein
+TIGR01277	thiamine ABC transporter, ATP-binding protein
+TIGR01288	nodulation ABC transporter NodI
+TIGR01291	ABC-2 type transporter, NodJ family
+TIGR01295	putative bacteriocin transport accessory protein
+TIGR01297	cation diffusion facilitator family transporter
+TIGR01414	outer membrane autotransporter barrel domain
+TIGR01497	K+-transporting ATPase, B subunit
+TIGR01522	calcium-transporting P-type ATPase, PMR1-type
+TIGR01528	nicotinamide mononucleotide transporter PnuC
+TIGR01657	P-type ATPase of unknown pump specificity (type V)
+TIGR01726	amino ABC transporter, permease protein, 3-TM region, His/Glu/Gln/Arg/opine family
+TIGR01727	oligopeptide/dipeptide ABC transporter, ATP-binding protein, C-terminal domain
+TIGR01728	ABC transporter, substrate-binding protein, aliphatic sulfonates family
+TIGR01729	taurine ABC transporter, periplasmic binding protein
+TIGR01730	efflux transporter, RND family, MFP subunit
+TIGR01845	efflux transporter, outer membrane factor (OMF) lipoprotein, NodT family
+TIGR01943	electron transport complex, RnfABCDGE type, A subunit
+TIGR01944	electron transport complex, RnfABCDGE type, B subunit
+TIGR01945	electron transport complex, RnfABCDGE type, C subunit
+TIGR01946	electron transport complex, RnfABCDGE type, D subunit
+TIGR01947	electron transport complex, RnfABCDGE type, G subunit
+TIGR01948	electron transport complex, RnfABCDGE type, E subunit
+TIGR02052	mercuric transport protein periplasmic component
+TIGR02115	K+-transporting ATPase, F subunit
+TIGR02122	TRAP transporter solute receptor, TAXI family
+TIGR02123	TRAP transporter, 4TM/12TM fusion protein
+TIGR02135	phosphate transport system regulatory protein PhoU
+TIGR02138	phosphate ABC transporter, permease protein PstC
+TIGR02139	sulfate ABC transporter, permease protein CysT
+TIGR02140	sulfate ABC transporter, permease protein CysW
+TIGR02141	molybdate ABC transporter, permease protein
+TIGR02142	molybdate ABC transporter, ATP-binding protein
+TIGR02185	putative ECF transporter S component, Trep_Strep family
+TIGR02204	ABC transporter, permease/ATP-binding protein
+TIGR02294	nickel ABC transporter, nickel/metallophore periplasmic binding protein
+TIGR02314	D-methionine ABC transporter, ATP-binding protein
+TIGR02315	phosphonate ABC transporter, ATP-binding protein
+TIGR02357	energy-coupled thiamine transporter ThiT
+TIGR02358	putative hydroxymethylpyrimidine transporter CytX
+TIGR02359	energy coupling factor transporter S component ThiW
+TIGR02454	cobalt ECF transporter T component CbiQ
+TIGR02458	cobalt transporter subunit CbtA (proposed)
+TIGR02459	cobalt transporter subunit CbtB (proposed)
+TIGR02546	type III secretion apparatus H+-transporting two-sector ATPase
+TIGR02601	autotransporter-associated beta strand repeat
+TIGR02633	D-xylose ABC transporter, ATP-binding protein
+TIGR02634	D-xylose ABC transporter, D-xylose-binding protein
+TIGR02637	rhamnose ABC transporter, rhamnose-binding protein
+TIGR02698	copper transport repressor, CopY/TcrY family
+TIGR02718	siderophore transporter, RhtX/FptX family
+TIGR02789	nickel ABC transporter, permease subunit NikB
+TIGR02790	nickel ABC transporter, permease subunit NikC
+TIGR02803	TonB system transport protein ExbD
+TIGR02804	TonB system transport protein ExbD
+TIGR02995	ectoine/hydroxyectoine ABC transporter solute-binding protein EhuB
+TIGR03002	lipopolysaccharide transport periplasmic protein LptA
+TIGR03003	ectoine/hydroxyectoine ABC transporter, permease protein EhuD
+TIGR03004	ectoine/hydroxyectoine ABC transporter, permease protein EhuC
+TIGR03005	ectoine/hydroxyectoine ABC transporter, ATP-binding protein EhuA
+TIGR03136	Na+-transporting malonate decarboxylase, carboxybiotin decarboxylase subunit
+TIGR03226	2-aminoethylphosphonate ABC transporter, permease protein
+TIGR03227	2-aminoethylphosphonate ABC transporter, 2-aminoethylphosphonate binding protein
+TIGR03255	2-aminoethylphosphonate ABC transport system, membrane component PhnV
+TIGR03258	2-aminoethylphosphonate ABC transport system, ATP-binding component PhnT
+TIGR03261	putative 2-aminoethylphosphonate ABC transporter, periplasmic 2-aminoethylphosphonate-binding protein
+TIGR03262	putative 2-aminoethylphosphonate ABC transporter, permease protein
+TIGR03265	putative 2-aminoethylphosphonate ABC transporter, ATP-binding protein
+TIGR03407	urea ABC transporter, urea binding protein
+TIGR03408	urea ABC transporter, permease protein UrtC
+TIGR03409	urea ABC transporter, permease protein UrtB
+TIGR03410	urea ABC transporter, ATP-binding protein UrtE
+TIGR03411	urea ABC transporter, ATP-binding protein UrtD
+TIGR03414	choline ABC transporter, periplasmic binding protein
+TIGR03415	choline ABC transporter, ATP-binding protein
+TIGR03416	choline ABC transporter, permease protein
+TIGR03427	ABC transporter periplasmic binding protein, urea carboxylase region
+TIGR03431	phosphonate ABC transporter, periplasmic phosphonate binding protein
+TIGR03441	urea transporter
+TIGR03480	hopanoid biosynthesis associated RND transporter like protein HpnN
+TIGR03518	gliding motility-associated ABC transporter permease protein GldF
+TIGR03521	gliding-associated putative ABC transporter substrate-binding component GldG
+TIGR03522	gliding motility-associated ABC transporter ATP-binding subunit GldA
+TIGR03608	putative bacteriocin export ABC transporter, lactococcin 972 group
+TIGR03616	pyrimidine utilization transport protein G
+TIGR03622	urea ABC transporter, permease protein UrtB
+TIGR03644	probable ammonium transporter, marine subtype
+TIGR03659	heme ABC transporter, heme-binding protein isdE
+TIGR03669	urea ABC transporter, substrate-binding protein
+TIGR03679	arCOG00187 universal archaeal metal-binding-domain/4Fe-4S-binding-domain containing ABC transporter, ATP-binding protein
+TIGR03727	urea ABC transporter, permease protein UrtC
+TIGR03730	tungstate ABC transporter binding protein WtpA
+TIGR03732	lantibiotic protection ABC transporter permease subunit, MutE/EpiE family
+TIGR03733	lantibiotic protection ABC transporter permease subunit, MutG family
+TIGR03740	lantibiotic protection ABC transporter, ATP-binding subunit
+TIGR03770	anchored repeat-type ABC transporter, permease subunit
+TIGR03771	anchored repeat-type ABC transporter, ATP-binding subunit
+TIGR03772	anchored repeat ABC transporter, substrate-binding protein
+TIGR03773	putative ABC transporter-associated repeat protein
+TIGR03796	NHLM bacteriocin system ABC transporter, peptidase/ATP-binding protein
+TIGR03797	NHLM bacteriocin system ABC transporter, ATP-binding protein
+TIGR03850	carbohydrate ABC transporter substrate-binding protein, CPR_0540 family
+TIGR03851	carbohydrate ABC transporter, N-acetylglucosamine/diacetylchitobiose-binding protein
+TIGR03861	alcohol ABC transporter, permease protein
+TIGR03863	ABC transporter, substrate binding protein, PQQ-dependent alcohol dehydrogenase system
+TIGR03864	ABC transporter, ATP-binding subunit, PQQ-dependent alcohol dehydrogenase system
+TIGR03868	proposed F420-0 ABC transporter, periplasmic F420-0 binding protein
+TIGR03869	proposed F420-0 ABC transporter, permease protein
+TIGR03871	quinoprotein dehydrogenase-associated probable ABC transporter substrate-binding protein
+TIGR03873	proposed F420-0 ABC transporter, ATP-binding protein
+TIGR03896	bacteriocin-type transport-associated protein
+TIGR04028	ABC transporter substrate binding protein, KPN_01854 family
+TIGR04060	formate transporter FocA
+TIGR04281	putative ABC transporter PGF-CTERM-modified substrate-binding protein
+TIGR04291	arsenical pump-driving ATPase
+TIGR04406	LPS export ABC transporter ATP-binding protein
+TIGR04407	LPS export ABC transporter permease LptF
+TIGR04408	LPS export ABC transporter permease LptG
+TIGR04409	LPS export ABC transporter periplasmic protein LptC
+TIGR04414	autotransporter strand-loop-strand O-heptosyltransferase
+TIGR04415	autotransporter passenger strand-loop-strand repeat
+TIGR04505	phosphate ABC transporter substrate-binding protein
+TIGR04518	ECF transporter S component, folate family
+TIGR04520	energy-coupling factor transporter ATPase
+TIGR04521	energy-coupling factor transporter ATPase
+TIGR04522	putative energy coupling factor transporter S component
+TIGR04553	putative selenate ABC transporter periplasmic binding protein

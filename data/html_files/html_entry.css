@@ -1,0 +1,56 @@
+div {
+    padding: 10px;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    position:relative;
+    overflow-x:hidden;
+    top: 0;
+}
+
+.content {
+    padding: 0px;
+    display: none;
+}
+
+.table_container {
+    display: inline-block;
+    width:65%;
+    float:right;
+    overflow:auto;
+    position:relative;
+}
+
+aside {
+    width:30%;
+    float:left;
+    border:2px;
+    left: 0
+    top: 1;
+    padding-left: 20px;
+
+}
+
+table {
+    width: 100%;
+}
+
+caption {
+    font-size: 20px;
+    margin-bottom:5px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #7aadff;
+}
+
+html_id {
+    display: none;
+}

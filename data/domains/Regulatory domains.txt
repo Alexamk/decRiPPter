@@ -1,0 +1,478 @@
+#leave the following line; indicates category name
+regulator
+
+PF02631	RecX family
+
+PF07729 FCD domain
+PF12802 MarR family
+PF03965 Penicillinase repressor
+PF02311 AraC-like ligand binding domain
+PF04542 Sigma-70 region 2
+PF08281 Sigma-70, region 4
+PF00874 PRD domain
+PF13404 AsnC-type helix-turn-helix domain
+PF13601 Winged helix DNA-binding domain
+PF09339 IclR helix-turn-helix domain
+PF12833 Helix-turn-helix domain
+PF13560 Helix-turn-helix domain
+PF13556 PucR C-terminal helix-turn-helix domain
+PF08220 DeoR-like helix-turn-helix domain
+PF13412 Winged helix-turn-helix DNA-binding
+PF13551 Winged helix-turn helix
+PF13384 Homeodomain-like domain
+
+# Added later
+PF01047 MarR family
+PF11774 Lsr2
+PF00196 LuxR regulator family
+PF01381 Helix-turn-helix
+TIGR03830   putative zinc finger/helix-turn-helix protein, YgiT family
+TIGR02894   transcription factor, RsfA family
+
+# Sigma factors
+TIGR02846	RNA polymerase sigma-K factor
+TIGR02960	RNA polymerase sigma-70 factor, TIGR02960 family
+TIGR02393	RNA polymerase sigma factor RpoD
+TIGR02392	alternative sigma factor RpoH
+TIGR02395	RNA polymerase sigma-54 factor
+TIGR02394	RNA polymerase sigma factor RpoS
+TIGR02479	RNA polymerase sigma factor, FliA/WhiG family
+TIGR02451	anti-sigma factor, putative, ChrR family
+TIGR03824	flagellar biosynthesis anti-sigma factor FlgM
+TIGR03001	RNA polymerase sigma-70 factor, Myxococcales family 1
+TIGR00377	anti-anti-sigma factor
+TIGR02997	RNA polymerase sigma factor, cyanobacterial RpoD-like family
+TIGR02959	RNA polymerase sigma factor, SigZ family
+TIGR02895	RNA polymerase sigma-I factor
+TIGR02885	RNA polymerase sigma-F factor
+TIGR02950	RNA polymerase sigma factor, SigM family
+TIGR02957	RNA polymerase sigma-70 factor, TIGR02957 family
+TIGR02999	RNA polymerase sigma factor, TIGR02999 family
+TIGR02954	RNA polymerase sigma-70 factor, TIGR02954 familyhypoth_equivalog
+TIGR02939	RNA polymerase sigma factor RpoE
+TIGR02835	RNA polymerase sigma-E factor
+TIGR02850	RNA polymerase sigma-G factor
+TIGR02937	RNA polymerase sigma factor, sigma-70 family
+TIGR02859	RNA polymerase sigma-H factor
+TIGR01925	anti-sigma F factor
+TIGR01924	anti-sigma B factor
+TIGR02952	RNA polymerase sigma-70 factor, TIGR02952 familyhypoth_equivalog
+TIGR02989	RNA polymerase sigma-70 factor, Rhodopirellula/Verrucomicrobium family
+TIGR02980	RNA polymerase sigma-70 factor, sigma-B/F/G subfamily
+TIGR03988	mycothiol system anti-sigma-R factor
+TIGR02983	RNA polymerase sigma-70 factor, sigma-E family
+TIGR02984	RNA polymerase sigma-70 factor, Planctomycetaceae-specific subfamily 1
+TIGR02985	RNA polymerase sigma-70 factor, Bacteroides expansion family 1
+TIGR02948	RNA polymerase sigma-W factor
+TIGR02949	anti-sigma factor, TIGR02949 family
+TIGR02886	anti-sigma F factor antagonist
+TIGR02947	RNA polymerase sigma-70 factor, TIGR02947 familyhypoth_equivalog
+TIGR02941	RNA polymerase sigma-B factor
+TIGR02943	RNA polymerase sigma-70 factor, TIGR02943 familyhypoth_equivalog
+PF07638	ECF sigma factor
+PF10099	Anti-sigma-K factor rskA
+PF17524	anti-sigma factor CnrY
+PF15001	AP-5 complex subunit sigma-1
+PF04353	Regulator of RNA polymerase sigma(70) subunit, Rsd/AlgQ
+PF04582	Reovirus sigma C capsid protein
+PF01664	Reovirus viral attachment protein sigma 1
+PF12791	Anti-sigma factor N-terminus
+PF03873	Anti sigma-E protein RseA, C-terminal domain
+PF03872	Anti sigma-E protein RseA, N-terminal domain
+PF10764	Inhibitor of sigma-G Gin
+PF04246	Positive regulator of sigma(E), RseC/MucC
+PF04316	Anti-sigma-28 factor, FlgM
+PF16751	Anti-sigma-D factor RsdA to sigma factor binding region
+
+
+
+PF00072	Response regulator receiver domain
+PF00126	Bacterial regulatory helix-turn-helix protein, lysR family
+PF00165	Bacterial regulatory helix-turn-helix proteins, AraC family
+PF00170	bZIP transcription factor
+PF00196	Bacterial regulatory proteins, luxR family
+PF00319	SRF-type transcription factor (DNA-binding and dimerisation domain)
+PF00325	Bacterial regulatory proteins, crp family
+PF00352	Transcription factor TFIID (or TATA-binding protein, TBP)
+PF00356	Bacterial regulatory proteins, lacI family
+PF00376	MerR family regulatory protein
+PF00382	Transcription factor TFIIB repeat
+PF00392	Bacterial regulatory proteins, gntR family
+PF00415	Regulator of chromosome condensation (RCC1) repeat
+PF00440	Bacterial regulatory proteins, tetR family
+PF00452	Apoptosis regulator proteins, Bcl-2 family
+PF00486	Transcriptional regulatory protein, C terminal
+PF00539	Transactivating regulatory protein (Tat)
+PF00543	Nitrogen regulatory protein P-II
+PF00585	C-terminal regulatory domain of Threonine dehydratase
+PF00605	Interferon regulatory factor transcription factor
+PF00615	Regulator of G protein signaling domain
+PF00808	Histone-like transcription factor (CBF/NF-Y) and archaeal histone
+PF01022	Bacterial regulatory protein, arsR family
+PF01052	Type III flagellar switch regulator (C-ring) FliN C-term
+PF01096	Transcription factor S-II (TFIIS)
+PF01111	Cyclin-dependent kinase regulatory subunit
+PF01214	Casein kinase II regulatory subunit
+PF01358	Poly A polymerase regulatory subunit
+PF01475	Ferric uptake regulator family
+PF01603	Protein phosphatase 2A regulatory B subunit (B56 family)
+PF01614	Bacterial transcriptional regulator
+PF01709	Transcriptional regulator
+PF01818	Bacteriophage translational regulator
+PF01905	CRISPR-associated negative auto-regulator DevR/Csa2
+PF01948	Aspartate carbamoyltransferase regulatory chain, allosteric domain
+PF01978	Sugar-specific transcriptional regulator TrmB
+PF02045	CCAAT-binding transcription factor (CBF-B/NF-YA) subunit B
+PF02082	Transcriptional regulator
+PF02197	Regulatory subunit of type II PKA R-subunit
+PF02200	STE like transcription factor
+PF02467	Transcription factor WhiB
+PF02599	Global regulator protein family
+PF02748	Aspartate carbamoyltransferase regulatory chain, metal binding domain
+PF02877	Poly(ADP-ribose) polymerase, regulatory domain
+PF02954	Bacterial regulatory protein, Fis family
+PF03131	bZIP Maf transcription factor
+PF03153	Transcription factor IIA, alpha/beta subunit
+PF03299	Transcription factor AP-2
+PF03333	Adhesin biosynthesis transcription regulatory protein
+PF03398	Regulator of Vps4 activity in the MVB pathway
+PF03430	Trans-activating transcriptional regulator
+PF03517	Regulator of volume decrease after cellular swelling
+PF03529	Otx1 transcription factor
+PF03551	Transcriptional regulator PadR-like family
+PF03634	TCP family transcription factor
+PF03666	Nitrogen Permease regulator of amino acid transport activity 3
+PF03849	Transcription factor Tfb2
+PF03850	Transcription factor Tfb4
+PF03957	Jun-like transcription factor
+PF04001	Transcription factor Vhr1
+PF04082	Fungal specific transcription factor domain
+PF04246	Positive regulator of sigma(E), RseC/MucC
+PF04247	Invasion gene expression up-regulator, SirB
+PF04353	Regulator of RNA polymerase sigma(70) subunit, Rsd/AlgQ
+PF04366	Las17-binding protein actin regulator
+PF04441	Poxvirus early transcription factor (VETF), large subunit
+PF04516	CP2 transcription factor
+PF04520	Senescence regulator
+PF04621	PEA3 subfamily ETS-domain transcription factor N terminal domain
+PF04640	PLATZ transcription factor
+PF04647	Accessory gene regulator B
+PF04761	Lactococcus bacteriophage putative transcription regulator
+PF04921	XAP5, circadian clock regulator
+PF04939	Ribosome biogenesis regulatory protein (RRS1)
+PF05004	Interferon-related developmental regulator (IFRD)
+PF05233	PHB accumulation regulatory domain
+PF05308	Mitochondrial fission regulator
+PF05389	Negative regulator of genetic competence (MecA)
+PF05443	ROS/MUCR transcriptional regulator protein
+PF05459	Herpesvirus transcriptional regulator family
+PF05584	Sulfolobus plasmid regulatory protein
+PF05687	BES1/BZR1 plant transcription factor, N-terminal
+PF05718	Poxvirus intermediate transcription factor
+PF05930	Prophage CP4-57 regulatory protein (AlpA)
+PF05978	Ion channel regulatory protein UNC-93
+PF06133	Control of competence regulator ComK, YlbF/YmcA
+PF06160	Septation ring formation regulator, EzrA
+PF06218	Nitrogen permease regulator 2
+PF06331	Transcription factor TFIIH complex subunit Tfb5
+PF06345	DRF Autoregulatory Domain
+PF06399	GTP cyclohydrolase I feedback regulatory protein (GFRP)
+PF06490	Flagellar regulatory protein FleQ
+PF06529	Vertebrate interleukin-3 regulated transcription factor
+PF06542	Regulator protein PHA-1
+PF06546	Vertebrate heat shock transcription factor
+PF06682	SOCE-associated regulatory factor of calcium homoeostasis
+PF06719	AraC-type transcriptional regulator N-terminus
+PF06775	Putative adipose-regulatory protein (Seipin)
+PF06877	Regulator of ribonuclease activity B
+PF06881	RNA polymerase II transcription factor SIII (Elongin) subunit A
+PF06892	Phage regulatory protein CII (CP76)
+PF06956	Regulator of RNA terminal phosphate cyclase
+PF07037	Putative transcription regulator (DUF1323)
+PF07180	CaiF/GrlA transcriptional regulator
+PF07194	P2 response regulator binding domain
+PF07297	Dolichol phosphate-mannose biosynthesis regulatory protein (DPM2)
+PF07317	Flagellar regulator YcgR
+PF07336	Putative stress-induced transcription regulator
+PF07417	Transcriptional regulator Crl
+PF07441	SigmaK-factor processing regulatory protein BofA
+PF07494	Two component regulator propeller
+PF07500	Transcription factor S-II (TFIIS), central domain
+PF07573	Nitrogen regulatory protein AreA N terminus
+PF07584	Aerotolerance regulator N-terminal
+PF07704	Rv0623-like transcription factor
+PF07750	GcrA cell cycle regulator
+PF07879	PHB/PHA accumulation regulator DNA-binding domain
+PF07905	Purine catabolism regulatory protein-like family
+PF08164	Apoptosis-antagonizing transcription factor, C-terminal
+PF08270	M protein trans-acting positive regulator (MGA) PRD domain
+PF08280	M protein trans-acting positive regulator (MGA) HTH domain
+PF08375	Proteasome regulatory subunit C-terminal
+PF08381	Transcription factor regulating root and shoot growth via Pin3
+PF08474	Myelin transcription factor 1
+PF08493	Aflatoxin regulatory protein
+PF08536	Whirly transcription factor
+PF08574	Transcription factor Iwr1
+PF08577	PI31 proteasome regulator
+PF08601	Transcription factor PAP1
+PF08618	Transcription factor Opi1
+PF08639	DNA replication regulator SLD3
+PF08731	Transcription factor AFT
+PF08744	Plant transcription factor NOZZLE
+PF08781	Transcription factor DP
+PF08961	Nuclear receptor-binding factor 2, autophagy regulator
+PF09012	FeoC like transcriptional regulator
+PF09025	YopR, type III needle-polymerisation regulator
+PF09114	Transcription factor MotA, activation domain
+PF09128	Regulator of G protein signalling-like domain
+PF09174	Maf1 regulator
+PF09341	Transcription factor Pcc1
+PF09388	Spo0E like sporulation regulatory protein
+PF09510	Rtt102p-like transcription regulator protein
+PF09621	Type III secretion system regulator (LcrR)
+PF09669	Phage regulatory protein Rha (Phage_pRha)
+PF09734	RNA polymerase III transcription factor (TF)IIIC subunit
+PF09748	Transcription factor subunit Med10 of Mediator complex
+PF09750	Alternative splicing regulator
+PF09824	ArsR transcriptional regulator
+PF09856	Predicted transcriptional regulator (DUF2083)
+PF09952	Transcriptional regulator, AbiEi antitoxin, Type IV TA system
+PF10119	Predicted methyltransferase regulatory domain
+PF10126	Uncharacterized protein, homolog of nitrogen regulatory protein PII
+PF10163	Transcription factor e(y)2
+PF10221	Cell cycle and development regulator
+PF10253	Mitotic checkpoint regulator, MAD2B-interacting
+PF10380	Transcription factor CRF1
+PF10401	Interferon-regulatory factor 3
+PF10406	Transcription factor TFIID complex subunit 8 C-term
+PF10545	Alcohol dehydrogenase transcription factor Myb/SANT-like
+PF10707	PhoP regulatory network protein YrbL
+PF10722	Putative bacterial sensory transduction regulator
+PF10723	Replication regulatory protein RepB
+PF10743	Regulatory phage protein cox
+PF10757	Biofilm formation regulator YbaJ
+PF10768	Class II flagellar assembly regulator
+PF11099	Apoptosis regulator M11L like
+PF11126	Transcriptional regulator DsbA
+PF11132	Transcriptional regulator protein (SplA)
+PF11250	Fantastic Four meristem regulator
+PF11261	Interferon regulatory factor 2-binding protein zinc finger
+PF11262	Transcription factor/nuclear export subunit protein 2
+PF11357	Cell cycle regulatory protein
+PF11423	Regulatory protein Mnt
+PF11426	Tn7 transposition regulator TnsC
+PF11459	Transcriptional regulator, AbiEi antitoxin, Type IV TA system
+PF11488	Transcriptional regulatory protein LGE1
+PF11495	Archaeal transcriptional regulator TrmB
+PF11507	Ebola virus-specific transcription factor VP30
+PF11521	C-terminal general transcription factor TFIIE alpha
+PF11566	PI31 proteasome regulator N-terminal
+PF11603	Regulatory protein Sir1
+PF11619	Transcription factor P53 - C terminal domain
+PF11776	Nickel/cobalt transporter regulator
+PF11938	TLR4 regulator and MIR-interacting MSAP
+PF11951	Fungal specific transcription factor domain
+PF12032	Regulatory CLIP domain of proteinases
+PF12041	Transcriptional regulator DELLA protein N terminal
+PF12129	Male germ-cell putative homeodomain transcription factor
+PF12163	DNA replication regulator
+PF12209	Leucine permease transcriptional regulator helical domain
+PF12298	Eukaryotic mitochondrial regulator protein
+PF12310	Transcription factor protein N terminal
+PF12336	SOX transcription factor
+PF12347	Holliday junction regulator protein family C-terminal repeat
+PF12351	Ca2+ regulator and membrane fusion protein Fig1
+PF12374	Double-sex mab3 related transcription factor 1
+PF12414	Calcitonin gene-related peptide regulator C terminal
+PF12431	Transcriptional regulator
+PF12443	AT-hook-containing transcription factor
+PF12460	RNAPII transcription regulator C-terminal
+PF12533	Neuronal helix-loop-helix transcription factor
+PF12537	The Golgi pH Regulator (GPHR) Family N-terminal
+PF12598	T-box transcription factor
+PF12625	Arabinose-binding domain of AraC transcription regulator, N-term
+PF12657	Transcription factor IIIC subunit delta N-term
+PF12660	Putative zinc-finger of transcription factor IIIC complex
+PF12761	Actin cytoskeleton-regulatory complex protein END3
+PF12763	Cytoskeletal-regulatory complex EF hand
+PF12767	Transcriptional regulator of RNA polII, SAGA, subunit
+PF12793	Sugar transport-related sRNA regulator N-term
+PF12855	Life-span regulatory factor
+PF13338	Transcriptional regulator, AbiEi antitoxin
+PF13339	Apoptosis antagonizing transcription factor
+PF13411	MerR HTH family regulatory protein
+PF13453	Transcription factor zinc-finger
+PF13540	Regulator of chromosome condensation (RCC1) repeat
+PF13591	MerR HTH family regulatory protein
+PF13620	Carboxypeptidase regulatory-like domain
+PF13713	Transcription factor BRX N-terminal domain
+PF13791	Sigma factor regulator C-terminal
+PF13797	Post-transcriptional regulator
+PF13800	Sigma factor regulator N-terminal
+PF13887	Myelin gene regulatory factor -C-terminal domain 1
+PF13888	Myelin gene regulatory factor C-terminal domain 2
+PF13908	Wnt and FGF inhibitory regulator
+PF13916	PP1-regulatory protein, Phostensin N-terminal
+PF13945	Salt tolerance down-regulator
+PF14184	Regulatory protein YrvL
+PF14215	bHLH-MYC and R2R3-MYB transcription factors N-terminal
+PF14250	AbrB-like transcriptional regulator
+PF14278	Transcriptional regulator C-terminal region
+PF14396	Cystic fibrosis TM conductance regulator (CFTR), regulator domain
+PF14500	Dos2-interacting transcription regulator of RNA-Pol-II
+PF14514	Transcriptional regulator, TetR, C-terminal
+PF14549	DNA-binding transcriptional regulator Cro
+PF14557	Putative AphA-like transcriptional regulator
+PF14611	Mitochondrial inner-membrane-bound regulator
+PF14655	Rab3 GTPase-activating protein regulatory subunit N-terminus
+PF14656	Rab3 GTPase-activating protein regulatory subunit C-terminus
+PF14876	Respiratory growth transcriptional regulator
+PF14941	Transcriptional regulator, Out at first
+PF14965	Negative regulator of p53/TP53
+PF14972	Mitochondrial morphogenesis regulator
+PF14998	Transcription Regulator
+PF15060	Differentiation and proliferation regulator
+PF15065	Lysosomal transcription factor, NCU-G1
+PF15286	Apoptosis regulator M11, B cell 2 leukaemia/lymphoma like
+PF15289	Regulatory factor X-associated C-terminal binding domain
+PF15317	Cardiac transcription factor regulator, Developmental protein
+PF15503	Protein phosphatase 1 regulatory subunit 35 C-terminus
+PF15684	Active regulator of SIRT1, or 40S ribosomal protein S19-binding 1
+PF15691	Protein phosphatase 1 regulatory subunit 32
+PF15695	Rec (regulator of expression encoded by corf) of HERV-K-113
+PF15714	Stage V sporulation protein T C-terminal, transcription factor
+PF15723	Motility quorum-sensing regulator, toxin of MqsA
+PF15740	Protein phosphatase 1 regulatory subunit 26 N-terminus
+PF15745	AP-1 complex-associated regulatory protein
+PF15791	Doublesex-and mab-3-related transcription factor C1 and C2
+PF15820	Endothelial cell-specific chemotaxis regulator
+PF15871	Junction-mediating and -regulatory protein
+PF16176	T-box transcription factor-associated
+PF16421	E2F transcription factor CC-MB domain
+PF16422	Transcription factor COE1 DNA-binding domain
+PF16423	Transcription factor COE1 helix-loop-helix domain
+PF16454	Phosphatidylinositol 3-kinase regulatory subunit P85 inter-SH2 domain
+PF16507	Proteasome-substrate-size regulator, mid region
+PF16518	T3SS negative regulator,GrlR
+PF16543	DRG Family Regulatory Proteins, Tma46
+PF16547	Proteasome-substrate-size regulator, N-terminal
+PF16644	Regulatory region of Na+/H+ exchanger NHE binds to calmodulin
+PF16701	Adenylate cyclase regulatory domain
+PF16761	Transcription-silencing protein, cryptic loci regulator Clr2
+PF16770	Regulator of Ty1 transposition protein 107 BRCT domain
+PF16771	Regulator of Ty1 transposition protein 107 BRCT domain
+PF16777	Transcriptional regulator, RHH-like, CopG
+PF16832	Erythroid krueppel-like transcription factor, transactivation 1
+PF16833	Erythroid krueppel-like transcription factor, transactivation 2
+PF16878	Transcriptional regulator, SIX1, N-terminal SD domain
+PF16965	Ceramide synthase regulator
+PF17110	Subunit 11 of the general transcription factor TFIIH
+PF17113	Regulatory signalling modulator protein AmpE
+PF17194	Transcriptional regulator, AbiEi antitoxin N-terminal domain
+TIGR00202	carbon storage regulator
+TIGR00240	aspartate carbamoyltransferase, regulatory subunit
+TIGR00244	transcriptional regulator NrdR
+TIGR00377	anti-anti-sigma factor
+TIGR00443	ATP phosphoribosyltransferase, regulatory subunit
+TIGR00865	apoptosis regulator
+TIGR01033	DNA-binding regulatory protein, YebC/PmpR family
+TIGR01105	regulatory protein GalF
+TIGR01271	cystic fibrosis transmembrane conductor regulator (CFTR)
+TIGR01387	heavy metal response regulator
+TIGR01419	PTS IIA-like nitrogen-regulatory protein PtsN
+TIGR01439	transcriptional regulator, AbrB family
+TIGR01617	transcriptional regulator, Spx/MgsR family
+TIGR01636	phage transcriptional regulator, RinA family
+TIGR01637	phage transcriptional regulator, ArpU family
+TIGR01817	Nif-specific regulatory protein
+TIGR01875	CRISPR-associated autoregulator DevR family
+TIGR01889	staphylococcal accessory regulator family
+TIGR01924	anti-sigma B factor
+TIGR01925	anti-sigma F factor
+TIGR02040	transcriptional regulator PpsR
+TIGR02043	Zn(II)-responsive transcriptional regulator
+TIGR02044	Cu(I)-responsive transcriptional regulator
+TIGR02047	Cd(II)/Pb(II)-responsive transcriptional regulator
+TIGR02051	Hg(II)-responsive transcriptional regulator
+TIGR02135	phosphate transport system regulatory protein PhoU
+TIGR02154	phosphate regulon transcriptional regulatory protein PhoB
+TIGR02277	phenylacetic acid degradation operon negative regulatory protein PaaX
+TIGR02297	4-hydroxyphenylacetate catabolism regulatory protein HpaA
+TIGR02325	phosphonate metabolism transcriptional regulator PhnF
+TIGR02329	propionate catabolism operon regulatory protein PrpR
+TIGR02337	homoprotocatechuate degradation operon regulator, HpaR
+TIGR02366	probable dihydroxyacetone kinase regulator
+TIGR02392	alternative sigma factor RpoH
+TIGR02393	RNA polymerase sigma factor RpoD
+TIGR02394	RNA polymerase sigma factor RpoS
+TIGR02395	RNA polymerase sigma-54 factor
+TIGR02431	beta-ketoadipate pathway transcriptional regulators, PcaR/PcaU/PobR family
+TIGR02451	anti-sigma factor, putative, ChrR family
+TIGR02479	RNA polymerase sigma factor, FliA/WhiG family
+TIGR02511	type III secretion effector delivery regulator, TyeA family
+TIGR02568	type III secretion regulator YopN/LcrE/InvE/MxiC
+TIGR02572	type III secretion system regulator LcrR
+TIGR02605	putative regulatory protein, FmdB family
+TIGR02681	phage regulatory protein, Rha family
+TIGR02702	iron-sulfur cluster biosynthesis transcriptional regulator SufR
+TIGR02793	nickel-responsive transcriptional regulator NikR
+TIGR02812	fatty acid metabolism transcriptional regulator FadR
+TIGR02835	RNA polymerase sigma-E factor
+TIGR02844	sporulation transcriptional regulator SpoIIID
+TIGR02846	RNA polymerase sigma-K factor
+TIGR02850	RNA polymerase sigma-G factor
+TIGR02854	sigma-E processing peptidase SpoIIGA
+TIGR02859	RNA polymerase sigma-H factor
+TIGR02862	pro-sigmaK processing inhibitor BofA
+TIGR02885	RNA polymerase sigma-F factor
+TIGR02886	anti-sigma F factor antagonist
+TIGR02890	regulatory protein, yteA family
+TIGR02895	RNA polymerase sigma-I factor
+TIGR02915	PEP-CTERM-box response regulator transcription factor
+TIGR02937	RNA polymerase sigma factor, sigma-70 family
+TIGR02938	nitrogen fixation negative regulator NifL
+TIGR02939	RNA polymerase sigma factor RpoE
+TIGR02941	RNA polymerase sigma-B factor
+TIGR02943	RNA polymerase sigma-70 factor, TIGR02943 family
+TIGR02944	FeS assembly SUF system regulator
+TIGR02947	RNA polymerase sigma-70 factor, TIGR02947 family
+TIGR02948	RNA polymerase sigma-W factor
+TIGR02949	anti-sigma factor, TIGR02949 family
+TIGR02950	RNA polymerase sigma factor, SigM family
+TIGR02952	RNA polymerase sigma-70 factor, TIGR02952 family
+TIGR02954	RNA polymerase sigma-70 factor, TIGR02954 family
+TIGR02957	RNA polymerase sigma-70 factor, TIGR02957 family
+TIGR02959	RNA polymerase sigma factor, SigZ family
+TIGR02960	RNA polymerase sigma-70 factor, TIGR02960 family
+TIGR02980	RNA polymerase sigma-70 factor, sigma-B/F/G subfamily
+TIGR02983	RNA polymerase sigma-70 factor, sigma-E family
+TIGR02984	RNA polymerase sigma-70 factor, Planctomycetaceae-specific subfamily 1
+TIGR02985	RNA polymerase sigma-70 factor, Bacteroides expansion family 1
+TIGR02989	RNA polymerase sigma-70 factor, Rhodopirellula/Verrucomicrobium family
+TIGR02997	RNA polymerase sigma factor, cyanobacterial RpoD-like family
+TIGR02998	regulator of ribonuclease activity A
+TIGR02999	RNA polymerase sigma factor, TIGR02999 family
+TIGR03001	RNA polymerase sigma-70 factor, Myxococcales family 1
+TIGR03020	transcriptional regulator EpsA
+TIGR03070	transcriptional regulator, y4mF family
+TIGR03209	transcriptional regulator BotR, P-21
+TIGR03298	transcriptional regulator, ArgP family
+TIGR03337	phosphonate utilization transcriptional regulator PhnR
+TIGR03338	phosphonate utilization associated transcriptional regulator
+TIGR03339	aminoethylphosphonate catabolism associated LysR family transcriptional regulator
+TIGR03420	DnaA regulatory inactivator Hda
+TIGR03433	transcriptional regulator, Acidobacterial, PadR-family
+TIGR03495	phage lysis regulatory protein, LysB family
+TIGR03541	LuxR family transcriptional regulatory, chaperone HchA-associated
+TIGR03613	pyrimidine utilization regulatory protein R
+TIGR03697	global nitrogen regulator NtcA
+TIGR03787	proteobacterial dedicated sortase system response regulator
+TIGR03823	flagellar regulatory protein FliZ
+TIGR03824	flagellar biosynthesis anti-sigma factor FlgM
+TIGR03879	probable regulatory domain
+TIGR03959	putative iron-only hydrogenase system regulator
+TIGR03968	mycofactocin system transcriptional regulator
+TIGR03988	mycothiol system anti-sigma-R factor
+TIGR04094	YSIRK-targeted surface antigen transcriptional regulator
+TIGR04176	EPS-associated transcriptional regulator, MarR family
+TIGR04472	mobile rSAM pair MarR family regulator

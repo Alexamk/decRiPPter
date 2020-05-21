@@ -1,0 +1,38 @@
+#leave the following line; indicates category name
+precursor
+
+PF14867 Lantibiotic alpha
+PF14404 Ribosomally synthesized peptide in Streptomyces species
+PF03047 COMC family
+PF02052 Gallidermin
+PF01721 Class II bacteriocin
+PF10439 Bacteriocin class II with double-glycine leader peptide 
+PF04604 Type A lantibiotic
+PF09221 Bacteriocin class IId cyclical uberolysin-like
+PF12173	Bacteriocin class IIc cyclic gassericin A-like					
+PF03515	Colicin-like bacteriocin tRNase domain					
+PF17312	Bacteriocin helveticin-J					
+PF09683	Bacteriocin (Lactococcin_972)					
+PF11420	Bacteriocin subtilosin A					
+PF11758	Aureocin-like type II bacteriocin
+PF08109	Lactocin 705 family					
+PF08129	Alpha/beta enterocin family
+PF16942	Putative cyclic bacteriocin
+PF17508	Microcin V bacteriocin
+PF14859	Colicin M
+
+TIGR04186   Putative ATP-grasp target RiPP	
+TIGR03793   NHLP leader peptide
+TIGR03798   nif11-like leader peptide domain
+TIGR04310   pantocin A family RiPP
+TIGR04404   sporulation killing factor
+TIGR04495   putative rSAM-modified RiPP, XyeA family
+TIGR04497   putative ATP-grasp target RiPP
+TIGR03969   mycofactocin precursor
+TIGR03898   type 2 lantibiotic, mersacidin/lichenicidin family
+TIGR03893   type 2 lantibiotic, SP_1948 family
+TIGR03892   thiazolylpeptide-type bacteriocin precursor
+TIGR03731   lantibiotic, gallidermin/nisin family
+TIGR03601   bacteriocin, heterocycloanthracin/sonorensin family	subfamily	
+TIGR03602   bacteriocin protoxin, streptolysin S family
+TIGR02107   coenzyme PQQ precursor peptide PqqA

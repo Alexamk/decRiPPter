@@ -1,0 +1,132 @@
+header {
+    width: calc(100%-5px);
+    position:relative;
+    overflow-x:hidden;
+    top: 0;
+    padding-left: 5px;
+}
+
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+th {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color:#fff;
+}
+table {
+    width: 90%% ;
+    margin: 0px auto;
+}
+
+caption {
+    font-size: 20px;
+}
+
+
+aside {
+    width:25%;
+    float:left;
+    border:2px;
+    position: fixed; 
+    overflow-x: hidden;
+    left: 0;
+    padding-left: 10px;
+
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align:center;
+    width: 100%;
+}
+
+div.tab button {
+    background-color: inherit;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+div.tab button.active {
+    background-color: #ccc;
+}
+
+div.tab_container{
+    width:70%;
+    float:right;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width:calc(100% - 24px);
+}
+
+.content {
+    padding: 0px;
+    display: none;
+}
+table {
+    width: 80%;
+}
+
+caption {
+    font-size: 20px;
+    margin-bottom:5px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+    background-color: #7aadff;
+}
+
