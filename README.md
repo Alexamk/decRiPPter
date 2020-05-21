@@ -4,7 +4,7 @@ Alexander M. Kloosterman, Peter Cimermancic, Somayah S. Elsayed, Chao Du, Michal
 
 Reference:
 Integration of machine learning and pan-genomics expands the biosynthetic landscape of RiPP natural products
-https://biorxiv.org/cgi/content/short/2020.05.19.104752v1
+Preprint: https://biorxiv.org/cgi/content/short/2020.05.19.104752v1
 
 Sample output:
 Streptomyces analysis (1,295 genomes)
@@ -16,37 +16,42 @@ http://www.bioinformatics.nl/~medem005/decRiPPter_strict/index.html
 Description:
 
 decRiPPter is a genome mining tool for detection of novel biosynthetic gene clusters (BGCs) of ribosomally synthesized and post-translationally modified peptides (RiPPs).
-The tool prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. 
-To circumvent this, decRiPPter functions as a platform for exploration and cluster prioritization. It allows for extensive user-defined filtering options of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
+
+decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. It prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. To help interpret the results, it allows for extensive user-defined filtering options of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
+
 
 If you're more interested in highly accurate detection of RiPP BGCs, staying within the bounds of known RiPP subclasses, 
 there are some excellent tools written for that purpose.
 For example, see BAGEL4, RODEO, antiSMASH or RiPP-PRISM. 
 
 
-Pipeline description
-
 decRiPPter detects putative RiPP precursors using a Support Vector Machine (SVM) trained at the detection of RiPP precursors irrespective of RiPP subclass.
 The genomic context of all candidate precursors is used to filter the results and narrow down to contain the features of interest. 
 It then groups the remaining gene clusters together to form candidate families. Overlap with antiSMASH can also be analyzed, to remove known RiPP families.
 
-decRiPPter is meant for the analysis of multiple closely related genomes simultaneously. 
-From these genomes, it will infer information about the frequency of occurrence of genes (called to COG-score), to filter out household genes.
-A large-scale analysis will also give a more accurate representation of the spread of a gene cluster family.
 
-Description step by step:
+decRiPPter is meant for the analysis of groups of closely related genomes simultaneously. 
+From these genomes, it will infer information about the frequency of occurrence of genes (called to COG-score), to filter out household genes.
+Analyzing more genomes simultaneously allows gives a representation of the spread of a gene cluster family, which can help in the filtering process.
+
+
+Pipeline description
 
 1) SVM precursor detection
 All encoded proteins with maximum length of 100 amino acid are analyzed with a pretrained SVM. In addition, all intergenic small open reading frames are also analyzed, even if these were not annotated.
 
+
 2) COG analysis
-The relative frequency of occurrence of each gene in all of the query genomes is determined next. Genes are grouped together if they have orthologue-like similarity to one another, the cutoff of which is based on the similarity of highly conserved genes in all genomes. See the publication for more details. 
+The relative frequency of occurrence of each gene in all of the query genomes is determined next. Genes are grouped together if they have orthologue-like similarity to one another, the cutoff of is based on the similarity of highly conserved genes in all genomes. See the publication for more details.
+
 
 3) Gene cluster formation
 Operon-like gene clusters are formed around each candidate precursor. Only genes on the same strand as the precursor are used. 
+
 Two methods are built in:
 In the simple method, only intergenic distance is used as a cutoff
-In the island method, genes are first fused within a small intergenic distance. The island may be further fused based on the difference of average COG scores.
+In the island method, genes are first fused within a small intergenic distance. The island may be further fused based on the difference of average COG scores
+
 
 4) Gene cluster annotation
 Gene clusters are annotated with Pfam and TIGRFAM. 
@@ -54,19 +59,22 @@ A number of flanking genes is included to show additional context.
 These domains are grouped into biosynthetic, transporter, regulator, peptidases and known RiPP categories.
 The lists with these domains are found in the data/domains folder, and can be changed and expanded there.
 
+
 5) Gene cluster filtering
 Gene clusters are filtered based on passed filters
 By default, outputs are generated for two different filter settings, called the mild filter and the strict filter.
 See below and the publication for more details.
+
 
 6) Gene cluster grouping
 Gene clusters are grouped in two ways:
 Precursor similarity (determined by blastp)
 Jaccard index of protein domains found 
 
+
 The resulting groups are further refined with the Markov Clustering Algorithm (MCL).
 An additional grouping method is carried out when both precursors and protein domains are overlapping between two gene clusters. 
-This last method is generally considered the most reliable (see publication). 
+This last method is considered the most reliable by the authors (see preprint). 
 
 
 Protein fasta and genbank files will be generated as output for each operon. The formed gene cluster families are also written out as a network file that can be parsed by CytoScape.
@@ -86,28 +94,40 @@ virtualenv decrippter -p python2
 Then use pip to install these python packages. The following versions have been tested:
 
 scikit-learn==0.11
+
 biopython==1.76
+
 scipy==1.2.3
+
 matplotlib==2.2.5
+
 networkx==2.2
+
 numpy==1.16.6
 
 In addition, make sure the following executables are in your $PATH variable.
 
 blastp (from NCBI BLAST+, tested V2.6)
+
 diamond (from DIAMOND, tested v0.9.31.132)
+
 hmmsearch (from hmmer, tested V3.1b2)
+
 mcl (from Markov Clustering Algorithm)
+
 
 Optional:
 prodigal (tested v2.6.3)
 
+
 Later versions of these packages have not been tested, although they should work fine barring any changes in output files.
 The only package with a version requirement is scikit-learn (v.011).
+
 
 In addition, please download the latest versions of the Pfam and TIGRFAM databases,
 from ftp://ftp.ebi.ac.uk/pub/databases/Pfam/releases/ and 
 ftp://ftp.jcvi.org/pub/data/TIGRFAMs/, respectively.
+
 
 Optional
 
@@ -117,22 +137,34 @@ Download and install antiSMASH V5 as specified on https://antismash.secondarymet
 Setting up the config file:
 In the config file, let the variables pfam_db_path and tigrfam_db_path point to the Pfam and TIGRFAM databases, respectively.
 
+
 Most settings in the config file can be given as arguments to the commandline application. 
 Specifying them in the config file will save you the effort of typing them out every time.
 
+
 Usage:
 
-Quick usage:
+
+Quick start:
+
+
 Step 1
-python genome_prep.py -o path/to/output -t taxid_to_download -i genomes_to_analyze PROJECT_NAME
+
+  python genome_prep.py -o path/to/output -t taxid_to_download -i genomes_to_analyze PROJECT_NAME
+
 
 Step 1.5 (Optional):
+
 switch to antiSMASH environment
-python antismash_wrapper.py -o path/to/output PROJECT_NAME
+
+  python antismash_wrapper.py -o path/to/output PROJECT_NAME
+
 switch back to decRiPPter environment
 
+
 Step 2
-python genecluster_formation -o path/to/output PROJECT_NAME
+
+  python genecluster_formation -o path/to/output PROJECT_NAME
 
 Visual output can be found by opening the Index.html file in the output folder
 
