@@ -1,4 +1,4 @@
-decRiPPter (Data-driven Exploratory Class-independent RiPP TrackER) 
+# decRiPPter (Data-driven Exploratory Class-independent RiPP TrackER) 
 
 Alexander M. Kloosterman, Peter Cimermancic, Somayah S. Elsayed, Chao Du, Michalis Hadjithomas, Mohamed S. Donia, Michael A. Fischbach, Gilles P. van Wezel, and Marnix H. Medema.
 
@@ -7,45 +7,42 @@ Integration of machine learning and pan-genomics expands the biosynthetic landsc
 Preprint: https://biorxiv.org/cgi/content/short/2020.05.19.104752v1
 
 Sample output:
-Streptomyces analysis (1,295 genomes)
-Mild filter:
-http://www.bioinformatics.nl/~medem005/decRiPPter_mild/index.html
-Strict filter:
-http://www.bioinformatics.nl/~medem005/decRiPPter_strict/index.html
+Large scale Streptomyces analysis (1,295 genomes)
+[Mild filter] (http://www.bioinformatics.nl/~medem005/decRiPPter_mild/index.html)
+[Strict filter] (http://www.bioinformatics.nl/~medem005/decRiPPter_strict/index.html)
 
-Description:
+## Description:
 
 decRiPPter is a genome mining tool for detection of novel biosynthetic gene clusters (BGCs) of ribosomally synthesized and post-translationally modified peptides (RiPPs).
 
-decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. It prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. To help interpret the results, it allows for extensive user-defined filtering options of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
-
+decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. It prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. To help interpret the results, it allows for extensive user-defined filtering of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
 
 If you're more interested in highly accurate detection of RiPP BGCs, staying within the bounds of known RiPP subclasses, 
 there are some excellent tools written for that purpose.
-For example, see BAGEL4, RODEO, antiSMASH or RiPP-PRISM. 
+For example, see [BAGEL4] (http://bagel4.molgenrug.nl/), [RODEO] (http://ripp.rodeo/), [antiSMASH] (https://antismash.secondarymetabolites.org/#!/start) or RiPP-PRISM (https://github.com/magarveylab/prism-releases). 
 
 
-decRiPPter detects putative RiPP precursors using a Support Vector Machine (SVM) trained at the detection of RiPP precursors irrespective of RiPP subclass.
+decRiPPter detects putative RiPP precursors using a Support Vector Machine (SVM) trained for the detection of RiPP precursors irrespective of RiPP subclass.
 The genomic context of all candidate precursors is used to filter the results and narrow down to contain the features of interest. 
 It then groups the remaining gene clusters together to form candidate families. Overlap with antiSMASH can also be analyzed, to remove known RiPP families.
 
 
-decRiPPter is meant for the analysis of groups of closely related genomes simultaneously. 
+**decRiPPter is meant for the analysis of multiple closely related genomes simultaneously.**
 From these genomes, it will infer information about the frequency of occurrence of genes (called to COG-score), to filter out household genes.
 Analyzing more genomes simultaneously allows gives a representation of the spread of a gene cluster family, which can help in the filtering process.
 
 
-Pipeline description
+### Pipeline description
 
-1) SVM precursor detection
+#### 1) SVM precursor detection
 All encoded proteins with maximum length of 100 amino acid are analyzed with a pretrained SVM. In addition, all intergenic small open reading frames are also analyzed, even if these were not annotated.
 
 
-2) COG analysis
+#### 2) COG analysis
 The relative frequency of occurrence of each gene in all of the query genomes is determined next. Genes are grouped together if they have orthologue-like similarity to one another, the cutoff of is based on the similarity of highly conserved genes in all genomes. See the publication for more details.
 
 
-3) Gene cluster formation
+#### 3) Gene cluster formation
 Operon-like gene clusters are formed around each candidate precursor. Only genes on the same strand as the precursor are used. 
 
 Two methods are built in:
@@ -53,20 +50,20 @@ In the simple method, only intergenic distance is used as a cutoff
 In the island method, genes are first fused within a small intergenic distance. The island may be further fused based on the difference of average COG scores
 
 
-4) Gene cluster annotation
+#### 4) Gene cluster annotation
 Gene clusters are annotated with Pfam and TIGRFAM. 
 A number of flanking genes is included to show additional context.
 These domains are grouped into biosynthetic, transporter, regulator, peptidases and known RiPP categories.
 The lists with these domains are found in the data/domains folder, and can be changed and expanded there.
 
 
-5) Gene cluster filtering
+#### 5) Gene cluster filtering
 Gene clusters are filtered based on passed filters
 By default, outputs are generated for two different filter settings, called the mild filter and the strict filter.
 See below and the publication for more details.
 
 
-6) Gene cluster grouping
+#### 6) Gene cluster grouping
 Gene clusters are grouped in two ways:
 Precursor similarity (determined by blastp)
 Jaccard index of protein domains found 
@@ -76,20 +73,20 @@ The resulting groups are further refined with the Markov Clustering Algorithm (M
 An additional grouping method is carried out when both precursors and protein domains are overlapping between two gene clusters. 
 This last method is considered the most reliable by the authors (see preprint). 
 
-
+#### 7) Output generation
 Protein fasta and genbank files will be generated as output for each operon. The formed gene cluster families are also written out as a network file that can be parsed by CytoScape.
 In addition, for each of the filter settings, an index page will be generated which contains links to the families and graphical output of each formed gene cluster. 
 On this index page, you can further filter the resulting gene clusters, based on gene cluster features. 
 
 
-Installation guide:
+## Installation guide:
 
 decRiPPter is available as a commandline-tool for Linux.
 As of now, it still runs in Python2 (Update to python3 is high on the todo list).
 
-The easiest way to install it is to create a vritualenvironment
+The easiest way to install it is to create a vritual environment
 
-virtualenv decrippter -p python2
+```virtualenv decrippter -p python2```
 
 Then use pip to install these python packages. The following versions have been tested:
 
