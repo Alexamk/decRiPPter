@@ -15,7 +15,7 @@ Large scale Streptomyces analysis (1,295 genomes)
 
 decRiPPter is a genome mining tool for detection of novel biosynthetic gene clusters (BGCs) of ribosomally synthesized and post-translationally modified peptides (RiPPs).
 
-decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. It prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. However, the resuling BGCs are not restricted to specific genetic markers, and may be novel RiPP BGCs as a result. To help interpret the results, it allows for extensive user-defined filtering of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
+decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. **It prioritizes novelty at the cost of accuracy**. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. However, **the resuling BGCs are not restricted to specific genetic markers, and may be novel RiPP BGCs as a result**. To help interpret the results, it allows for extensive user-defined filtering of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
 
 If you're more interested in highly accurate detection of RiPP BGCs, staying within the bounds of known RiPP subclasses, 
 there are some excellent tools written for that purpose.
@@ -180,7 +180,6 @@ Switch back to decRiPPter environment
 
     python genecluster_formation -o path/to/output PROJECT_NAME
 
-
 Visual output can be found by opening the Index.html file in the output folder
 
 
@@ -198,6 +197,7 @@ In the first step the genbank files are downloaded and/or parsed. Candidate prec
                       ```PROJECT NAME```
 
 ```-c``` (CORES):             Number of processor cores to use.
+
 ```-o``` (OUTPUTFOLDER):      The folder in which to create the project folder. The created project folder will be named after the project
 
 ##### 1a) Input selection and genome downloading
@@ -213,7 +213,7 @@ In the first step the genbank files are downloaded and/or parsed. Candidate prec
 
 Genomes in the folder specified by ```-i``` are analyzed in addition to the downloaded genomes (from ```-t```). when redoing a run in this step with the same genomes, simply use ```-rg all``` to reuse all genomes. Either argument is optional, although at least one of the three arguments should be given.
 
-**Relevant config entries**
+Additional details for downloading can be set in the config file.
 
 Which annotation to use when downloadig genomes from NCBI (genbank or refseq)
 
@@ -224,6 +224,7 @@ Seperate multiple requirements with commas, without spaces. E.g. assembly_level_
 Similar criteria can be passed to the required refseq category. E.g. representative genome,reference genome
 
 ```assembly_level_req=false```
+
 ```refseq_category= false```
 
 ##### 1b) SVM analysis of precursors
@@ -232,6 +233,7 @@ Similar criteria can be passed to the required refseq category. E.g. representat
 The cutoff can be set in config file (0-1). 
 
 Relevant config entries:
+
 ```SVM_cutoff=0.90```
 
 You can additionally set the maximum overlap between annotated genes when detecting small open reading frames in intergenic regions.
@@ -241,6 +243,7 @@ You can additionally set the maximum overlap between annotated genes when detect
 ##### 1c) COG calculation 
 
 ```--store_cog```:            Store the COG data seperately
+
 ```--load_cog```:             Load the COG data previously stored instead of calculating it
 
 Useful when redoing runs, as it foregoes the entire COG calculation. Can be used when rerunning with a subset of the original genomes. 
@@ -258,6 +261,7 @@ COG scores calculation relies on the identification of so-called trueCOGs: highl
 If not enough trueCOGs are found, even smaller subgroups are formed. These groups must fulfill the criteria given here.
 
 ```cog_min_group_size=5```
+
 ```cog_min_truecogs_req=10```
 
 Always make sure that you're analyzing enough genomes to fulfill the minimum group requirement.
@@ -273,6 +277,7 @@ The genomes can be added either in a random way (random), or each time the genom
 The latter option is more time-consuming than the former, as for each addition it needs to be calculated which genome addition would result in the smallest decrease. However, it may result in a higher number of trueCOGs, especially in small to intermediate-sized groups.
 
 Choose random or best
+
 ```cog_addmethod=random```
 
 After group formation, a new genome is selected to start a new group. This genome is selected from the genomes that have the lowest number of genome pairs set collectively in all their groups. 
@@ -280,6 +285,7 @@ After group formation, a new genome is selected to start a new group. This genom
 As long as the addition of new subgroups increases the quality of the subgroups (i.e. more genome pairs are formed), the process continues. The process is halted if the genome pairs have no longer improved (e.g. no new genome pairs were added) after a certain amount of iterations, or after a certain time (minutes). 
 
 ```cog_stop_split_iterations=5```
+
 ```cog_stop_split_time=false```
 
 When a genome pair is covered by two subgroups, the larger of the two will always be chosen.
@@ -327,15 +333,18 @@ For simple gene cluster formation, use this as a distance cutoff.
 ```simple_dist=750```
 
 For island gene cluster formation, the genes are fused into islands using the following distance:
+
 ```island_gene_dist=50```
 
 For island gene cluster formation, set this as a maximum distance cutoff between islands
+
 ```island_dist=750```
 
 For fusing two islands, the difference in average COG scores is calculated. 
 If the difference if below ```island_cog_cutoff + std_factor*(STD COG scores island 1 + STD COG scores island 2```, the islands are fused. 
 
 ```island_cog_cutoff=0.1```
+
 ```std_factor=1```
 
 ##### 2b) Extension and annotation
@@ -346,6 +355,7 @@ The core, operon-like region of the gene cluster is extended with a number of fl
 Protein domain annotation with Pfam and TIGRFAM is carried out in the formed gene clusters plus flanking regions. Make sure the paths are properly set.
 
 ```pfam_db_path=/path/to/Pfam-A.hmm```
+
 ```tigrfam_db_path=/path/to/TIGRFAMs_15.0_HMM.LIB```
 
 hmmsearch result files are kept, and are automatically reused in runs when found. To overwrite the results, set the following config entry to always. 
@@ -361,10 +371,16 @@ You can leave out any domain in the list by adding a # sign for it, or add new P
 Gene clusters are filtered based on the entries in the config file
 
 Minimum number of genes in the core region of the gene cluster
+
 ```gene_cluster_min_length=3```
 
 Maximum average COG score of the gene cluster (core region only)
+
 ```gene_cluster_max_cog=0.25```
+
+When using the optional antiSMASH annotation, you can filter these out here.
+
+```filter_antismash=false```
 
 Additional requirements are set for a minimum number of genes of each of the categories. 
 E.g. Minimum number of genes encoding biosynthetic proteins, in the core region or in the core with flanks .
@@ -372,30 +388,40 @@ E.g. Minimum number of genes encoding biosynthetic proteins, in the core region 
 ```gene_cluster_domains_min_biosyn_all=0```
 
 The filters can be specified to the core region or the entire gene cluster (including extension).
-E.g. gene_cluster_domains_min_biosyn sets a requirement for the core region of the gene cluster, and gene_cluster_domains_min_biosyn_all for the core region plus the flanking genes
+E.g. ```gene_cluster_domains_min_biosyn``` sets a requirement for the core region of the gene cluster, and ```gene_cluster_domains_min_biosyn_all``` for the core region plus the flanking genes
+
+
 
 ##### 2c) Gene cluster grouping
 
 Gene clusters are grouped in two ways, via precursor similarity or based on the Jaccard index of the detected protein domains. For this purpose, only the core regions of the gene clusters are used. 
-MIBiG BGCs (1.4) are automatically added to the comparison.
+MIBiG RiPP BGCs (V1.4) are downloaded in a preformatted file and automatically added to the comparison.
 
 ###### Clustering of BGCs
 Minimum group size
-min_group_size=2
+
+```min_group_size=2```
 
 ###### Precursor grouping
 Cutoff for precursors to be grouped together, in E-value and bitscore, respectively.
+
 ```prec_min_ev=1```
+
 ```prec_min_bitscore=30```
 
 Refine groups with mcl; weights are the percentage ID similarities
+
 ```precursor_mcl=true```
 
 ###### Domain-based grouping
+
 The cutoff to use
+
 ```jaccard_cutoff=0.5```
+
 Refine groups with mcl; weights are the Jaccard indeces
+
 ```jaccard_mcl=true```
 
-Finally, output is generated and can be found in the folder ~``Output```
+Finally, output is generated and can be found in the folder ~``Output```.
 
