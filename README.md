@@ -15,7 +15,7 @@ Large scale Streptomyces analysis (1,295 genomes)
 
 decRiPPter is a genome mining tool for detection of novel biosynthetic gene clusters (BGCs) of ribosomally synthesized and post-translationally modified peptides (RiPPs).
 
-decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. It prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. To help interpret the results, it allows for extensive user-defined filtering of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
+decRiPPter functions as a platform for the exploration and prioritization of candidate RiPP BGCs. It prioritizes novelty at the cost of accuracy. As such, many of the BGCs that will come out of these results may not actually be RiPP BGCs. However, the resuling BGCs are not restricted to specific genetic markers, and may be novel RiPP BGCs as a result. To help interpret the results, it allows for extensive user-defined filtering of the candidate RiPP BGCs, to detect RiPP BGCs that fall outside the scope of known RiPP classes. 
 
 If you're more interested in highly accurate detection of RiPP BGCs, staying within the bounds of known RiPP subclasses, 
 there are some excellent tools written for that purpose.
@@ -142,7 +142,7 @@ Genome (re)annotation is built in with decRiPPter via prodigal, although it is n
 
 Download and install antiSMASH V5 as specified in it's own environment. 
 
-#### Setup the config file:
+#### 3) Setup the config file:
 In the config file, let the variables ```pfam_db_path``` and ```tigrfam_db_path``` point to the Pfam and TIGRFAM databases, respectively.
 
 
