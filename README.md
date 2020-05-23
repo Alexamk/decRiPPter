@@ -330,6 +330,7 @@ If you want to rerun the gene cluster formation with different settings, but wan
 Further parameters can be given in the config file.
 
 For simple gene cluster formation, use this as a distance cutoff.
+
 ```simple_dist=750```
 
 For island gene cluster formation, the genes are fused into islands using the following distance:
@@ -343,9 +344,8 @@ For island gene cluster formation, set this as a maximum distance cutoff between
 For fusing two islands, the difference in average COG scores is calculated. 
 If the difference if below ```island_cog_cutoff + std_factor*(STD COG scores island 1 + STD COG scores island 2```, the islands are fused. 
 
-```island_cog_cutoff=0.1```
-
-```std_factor=1```
+    island_cog_cutoff=0.1
+    std_factor=1
 
 ##### 2b) Extension and annotation
 The core, operon-like region of the gene cluster is extended with a number of flanking genes, which are added regardless of strand or distance. These are mostly used for downstream filtering and visualization. You can set the number to be added on each side in the config file.
@@ -354,9 +354,8 @@ The core, operon-like region of the gene cluster is extended with a number of fl
 
 Protein domain annotation with Pfam and TIGRFAM is carried out in the formed gene clusters plus flanking regions. Make sure the paths are properly set.
 
-```pfam_db_path=/path/to/Pfam-A.hmm```
-
-```tigrfam_db_path=/path/to/TIGRFAMs_15.0_HMM.LIB```
+    pfam_db_path=/path/to/Pfam-A.hmm
+    tigrfam_db_path=/path/to/TIGRFAMs_15.0_HMM.LIB
 
 hmmsearch result files are kept, and are automatically reused in runs when found. To overwrite the results, set the following config entry to always. 
 
@@ -384,8 +383,9 @@ When using the optional antiSMASH annotation, you can filter these out here.
 
 Additional requirements are set for a minimum number of genes of each of the categories. 
 E.g. Minimum number of genes encoding biosynthetic proteins, in the core region or in the core with flanks .
-```gene_cluster_domains_min_biosyn=2```
-```gene_cluster_domains_min_biosyn_all=0```
+
+    gene_cluster_domains_min_biosyn=2
+    gene_cluster_domains_min_biosyn_all=0
 
 The filters can be specified to the core region or the entire gene cluster (including extension).
 E.g. ```gene_cluster_domains_min_biosyn``` sets a requirement for the core region of the gene cluster, and ```gene_cluster_domains_min_biosyn_all``` for the core region plus the flanking genes
@@ -405,9 +405,8 @@ Minimum group size
 ###### Precursor grouping
 Cutoff for precursors to be grouped together, in E-value and bitscore, respectively.
 
-```prec_min_ev=1```
-
-```prec_min_bitscore=30```
+    prec_min_ev=1
+    prec_min_bitscore=30
 
 Refine groups with mcl; weights are the percentage ID similarities
 
@@ -423,5 +422,5 @@ Refine groups with mcl; weights are the Jaccard indeces
 
 ```jaccard_mcl=true```
 
-Finally, output is generated and can be found in the folder ~``Output```.
+Finally, output is generated and can be found in the folder ```Output```.
 
