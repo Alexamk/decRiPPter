@@ -86,7 +86,7 @@ As of now, it still runs in Python2 (Update to python3 is high on the todo list)
 
 #### 1) Clone the environment locally
 
-```git clone ```
+```git clone https://github.com/Alexamk/decRiPPter.git```
 
 #### 2) Setup the environment
 
@@ -223,9 +223,8 @@ When downloading, indicate which assembly levels are required, and which refseq_
 Seperate multiple requirements with commas, without spaces. E.g. assembly_level_req=Scaffold,Complete Genome,Contig
 Similar criteria can be passed to the required refseq category. E.g. representative genome,reference genome
 
-```assembly_level_req=false```
-
-```refseq_category= false```
+    assembly_level_req=false
+    refseq_category= false
 
 ##### 1b) SVM analysis of precursors
 
@@ -260,9 +259,8 @@ The relationship scales roughly quadratic: e.g. for ~200 Gb, you can go up to 1,
 COG scores calculation relies on the identification of so-called trueCOGs: highly conserved genes present in all genomes of the subgroup analyzed.
 If not enough trueCOGs are found, even smaller subgroups are formed. These groups must fulfill the criteria given here.
 
-```cog_min_group_size=5```
-
-```cog_min_truecogs_req=10```
+    cog_min_group_size=5
+    cog_min_truecogs_req=10
 
 Always make sure that you're analyzing enough genomes to fulfill the minimum group requirement.
 
