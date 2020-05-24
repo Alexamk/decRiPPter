@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 def parse_nodes(path):
     f = open(path)
     id2parent = {}
