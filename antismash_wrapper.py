@@ -1,4 +1,6 @@
-# Wrappers to run/parse other RiPP genome mining tools
+# License: GNU Affero General Public License v3 or later
+
+# Wrapper script to run antiSMASH in it's own environment, after step 1
 # antiSMASH - requires a different python environment;
 #             this script can be called standalone to run antismash
 
