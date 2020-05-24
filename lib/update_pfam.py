@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 from lib import load_pickle,store_pickle
 import os
 
