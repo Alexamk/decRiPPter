@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
