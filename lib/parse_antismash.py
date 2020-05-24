@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 import os
 
 from lib import load_pickle, open_genbank
