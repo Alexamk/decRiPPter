@@ -1,5 +1,4 @@
-
-#            
+# License: GNU Affero General Public License v3 or later
 
 from log import return_logger
 logger = return_logger(__name__, False)
