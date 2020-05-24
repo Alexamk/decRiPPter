@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 # Organization
 
 # Each genome, scaffold and gene has a unique name/identifier
