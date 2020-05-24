@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 from ftplib import FTP
 from lib import find_file, clean
 from log import return_logger
