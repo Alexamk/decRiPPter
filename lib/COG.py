@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 #COG script
 #Original algorithm developed by Michaelis Hadjithomas
 #Script heavily modified and adapted by Alexander Kloosterman
