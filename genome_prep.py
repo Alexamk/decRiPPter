@@ -1,3 +1,4 @@
+# License: GNU Affero General Public License v3 or later
 
 #Genome pipeline script
 #Part of the decRiPPter pipeline
