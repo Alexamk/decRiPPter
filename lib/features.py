@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 from numpy import log2
 
 class RiPP:
