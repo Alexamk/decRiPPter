@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 import os
 import numpy as np
 from lib import run_mcl, read_mcl, pairs_to_groups, write_ssn, Edge
