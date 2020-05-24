@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 import time
 import os
 
