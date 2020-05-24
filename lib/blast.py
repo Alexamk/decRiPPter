@@ -1,3 +1,6 @@
+# License: GNU Affero General Public License v3 or later
+
+
 from lib import fuse_dict_list, parse_fasta, dict_to_fasta, split_dict, run_cmd
 from log import return_logger
 
