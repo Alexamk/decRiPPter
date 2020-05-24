@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 # Functions to find smORFs in sequences and score them
 from multiprocessing import Process, Queue
 import time
