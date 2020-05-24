@@ -1,4 +1,9 @@
-#Making arrows
+# License: GNU Affero General Public License v3 or later
+
+# Script based of script by Peter Cimermancic
+# Adapted by Alexander Kloosterman
+
+# Making arrows
 
 import os
     
