@@ -1,4 +1,6 @@
-# Find all operons belonging to specific subcategories based on pfam2ec linkings
+# License: GNU Affero General Public License v3 or later
+
+# Find all operons belonging to specific subcategories based on pfam2ec and TIGRFAM2ec links
 
 from Genes import OperonCollection, CollectionCollection
 
