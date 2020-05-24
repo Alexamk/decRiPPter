@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 # BLAST all precursors against each other
 # Use them to form networks/groups
 
