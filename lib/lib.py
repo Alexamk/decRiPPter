@@ -1,3 +1,5 @@
+# License: GNU Affero General Public License v3 or later
+
 import os
 import sys
 import numpy as np
