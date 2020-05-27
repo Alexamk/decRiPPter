@@ -878,6 +878,18 @@ def parse_arguments():
         
     return args,settings
     
+def check_paths(settings):
+    base_path = settings['paths']['base']
+    if not os.path.isdir(base_path):
+        logger.error('No results folder found from previous run. Please run the genome_prep.py script first')
+        raise ValueError('No results folder found from previous run. Please run the genome_prep.py script first')
+    
+    hmm_paths = settings['hmm_paths']
+    for database_folder, path in hmm_paths:
+        if not os.path.isfile(path):
+#            database_name = os.path.basename(database_folder)
+            logger.error('Path to hmm database is not found - please define it in the config.ini file')
+            raise ValueError('Path to hmm database is not found - please define it in the config.ini file')
     
 def build_operons(genome_dict, settings, rename=True):
     if not settings['load_operons']:
@@ -1000,7 +1012,9 @@ if __name__ == '__main__':
             RRE=RRE_path,base=path,operons_js_file=operons_js_file,operon_group_js_file=operon_group_js_file,filter_scripts=filter_scripts,\
             jquery_path=jquery_path,tablesorter_path=tablesorter_path,jaccard_prec_path=jaccard_prec_path,index_file=index_file_all)
     settings['paths'] = paths
-    settings['hmm_paths'] = ((hmm_path_pfam,settings['pfam_db_path']),(hmm_path_tigrfam,settings['tigrfam_db_path']))
+    settings['hmm_paths'] = ((hmm_path_pfam, settings['pfam_db_path']),(hmm_path_tigrfam, settings['tigrfam_db_path']))
+    
+    check_paths(settings)
     
     for p in blast_muscle_path,jaccard_path,jaccard_prec_path,hmm_path,hmm_path_pfam,hmm_path_tigrfam,path_out,operon_path,entry_path:
         if not os.path.isdir(p):
