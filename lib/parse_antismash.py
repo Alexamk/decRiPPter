@@ -20,7 +20,7 @@ def read_all_antismash(genomes_folder, genome_dict, antismash_version):
             logger.warning('Not parsing %s antiSMASH results' %genome)
             all_clusters[genome] = {}
             continue
-        all_seqs = open_genbank(result_file)
+        all_seqs = open_genbank(os.path.join(antismash_folder, result_file))
         clusters = find_gbk_clusters(all_seqs, antismash_version)
         all_clusters[genome] = clusters
         
