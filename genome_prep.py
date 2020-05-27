@@ -33,7 +33,7 @@ import lib.smorfs as sm
 import lib.prodigal as pr
 import lib.blast as blast
 import lib.COG as COG
-import lib.split_genomes_mash as mash
+#import lib.split_genomes_mash as mash
     
 logger = return_logger('genome_prep', False)
     
