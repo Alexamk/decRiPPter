@@ -235,6 +235,11 @@ Relevant config entries:
 
 ```SVM_cutoff=0.90```
 
+You can also set the minimum and maximum length of the precursor candidates. These lengths concern the number of amino acids.
+
+    smorf_min_len=5
+    smorf_max_len=100 
+
 You can additionally set the maximum overlap between annotated genes when detecting small open reading frames in intergenic regions.
 
 ```maximum_overlap_smorf=20```
@@ -288,10 +293,7 @@ As long as the addition of new subgroups increases the quality of the subgroups 
 
 When a genome pair is covered by two subgroups, the larger of the two will always be chosen.
 
-In addition, the process stops if all genomes are at least part of one subgroup and the minimum number of iterations has passed.
-
-```cog_bottomup_min_iter=10```
-
+These settings have worked when doing the analysis of 1,295 Streptomyces genomes split into 10 different groups before doing the allVall BLAST, but may not to be adjusted for other genera. 
 
 #### Step 1.5)  Overlap with antiSMASH (optional)
 
