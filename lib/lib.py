@@ -319,7 +319,7 @@ def run_cmd(commands):
     stdout,stderr = p.stdout.read(),p.stderr.read()
     if stderr:
         logger.debug('System error:\n"%s"' %stderr)
-    else:
+    if stdout:
         logger.debug('System output:\n"%s"' %stdout)
     return stdout, stderr
 
