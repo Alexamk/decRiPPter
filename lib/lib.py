@@ -313,14 +313,14 @@ def run_prodigal_cmd(infile,outfile):
     stdout, stderr = run_cmd(cmds)
     
 def run_cmd(commands):
-    logger.debug('Running system command %s' %(' '.join(commands)))
+    logger.debug('Running system command "%s"' %(' '.join(commands)))
     p = Popen(commands, stdout=PIPE, stderr=PIPE)
     p.wait()
     stdout,stderr = p.stdout.read(),p.stderr.read()
     if stderr:
-        logger.debug(stderr)
+        logger.debug('System error:\n"%s"' %stderr)
     else:
-        logger.debug(stdout)
+        logger.debug('System output:\n"%s"' %stdout)
     return stdout, stderr
 
 
