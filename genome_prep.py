@@ -183,12 +183,16 @@ def prep_parse_worker(genome, genomes_path):
            
 def gbk_parser(settings, genome_seqs, gene_names, scaf_names, files_parsed, genomeacc2name):
     include_pseudo = settings['pseudo']
-    smorf_name_base = settings['smorf_base_name']
-    overlap = settings['maximum_overlap_smorf']
     genome_path = settings['paths']['genome']
+    smorf_settings = {
+                      'base_name' : settings['smorf_base_name'],
+                      'min_len' : settings['smorf_min_len'],
+                      'max_len' : settings['smorf_max_len'],
+                      'overlap' : settings['maximum_overlap_smorf'],
+                      }
     
     jobs = gather_parse_gbk_jobs(genome_seqs, files_parsed)
-    parse_args = [genome_path, gene_names, scaf_names, include_pseudo, files_parsed, genomeacc2name, smorf_name_base, overlap]
+    parse_args = [genome_path, gene_names, scaf_names, include_pseudo, files_parsed, genomeacc2name, smorf_settings]
     results = operator(jobs, settings['cores'], parse_gbk_worker, parse_args, quiet=False)
     genome_dict = {}
     newly_named_genes = 0
@@ -209,7 +213,7 @@ def gather_parse_gbk_jobs(genome_seqs, files_parsed):
         jobs.append(job)
     return jobs
     
-def parse_gbk_worker(genome_data,path,gene_names,scaf_names,include_pseudo,files_parsed,genomeacc2name,smorf_name_base,overlap):
+def parse_gbk_worker(genome_data, path, gene_names, scaf_names, include_pseudo, files_parsed, genomeacc2name, smorf_settings):
     genome, file_parsed, seqs = genome_data
     genome_folder = os.path.join(path,genome) 
     if seqs == None:
@@ -308,13 +312,14 @@ def parse_gbk_worker(genome_data,path,gene_names,scaf_names,include_pseudo,files
                      
                 if name != name_prev:
                     # print('Analyzing intergenic region')
-                    start_intergenic_seq = pos_adj = max(0,end_prev - overlap)
-                    end_intergenic_seq = min(start+overlap,len(contig.seq))
+                    
+                    start_intergenic_seq = pos_adj = max(0, end_prev - smorf_settings['overlap'])
+                    end_intergenic_seq = min(start+smorf_settings['overlap'], len(contig.seq))
                     intergenic_seq = str(contig.seq[start_intergenic_seq:end_intergenic_seq])
-                    smorfs_intergenic = sm.smorfs_main(intergenic_seq,pos_adj=pos_adj)
+                    smorfs_intergenic = sm.smorfs_main(intergenic_seq, smorf_settings, pos_adj=pos_adj)
                     
                     for smorf_data in smorfs_intergenic:
-                        smorf_name = '%s_%s_%s' %(genome,smorf_name_base,str(smorf_nr).zfill(6))
+                        smorf_name = '%s_%s_%s' %(genome,smorf_settings['base_name'],str(smorf_nr).zfill(6))
                         smorf_nr += 1 
                         new_smorfs.append((genome,scaffold_name,smorf_name) + smorf_data)
                     
@@ -329,8 +334,10 @@ def parse_gbk_worker(genome_data,path,gene_names,scaf_names,include_pseudo,files
                     dnaseq_prot = scaffold_seq[start:end]
                     if strand == '-':
                         dnaseq_prot = rev_comp(dnaseq_prot)
+                    len_prot = len(protseq)
+                    SVM_candidate = (len_prot <= smorf_settings['max_len'] and len_prot >= smorf_settings['min_len'] and not is_pseudo)
                     gene = Gene(start=start,end=end,strand=strand,name=name,transl=protseq,\
-                            pseudo=is_pseudo,SVM_candidate=(len(protseq)<100 and not is_pseudo),intergenic=False,SVM_hit=False,active=False) 
+                            pseudo=is_pseudo, SVM_candidate=SVM_candidate, intergenic=False, SVM_hit=False, active=False) 
                     if 'protein_id' in feat.qualifiers:
                         gene.protein_id = feat.qualifiers['protein_id'][0]
                     if 'locus_tag' in feat.qualifiers:
@@ -372,7 +379,7 @@ def parse_gbk_worker(genome_data,path,gene_names,scaf_names,include_pseudo,files
         gene.genome = genome_obj.accession
         if gene.SVM_candidate:
             new_smorfs.append((gene.genome,gene.scaffold,gene.name,gene.start,gene.end,gene.strand,len(gene.transl),gene.get_seq(reference_obj=genome_obj),gene.transl))
-    smorfs_path = os.path.join(genome_folder,'smORFs.txt') 
+    smorfs_path = os.path.join(genome_folder, 'smORFs.txt') 
     sm.write_smorfs(new_smorfs,smorfs_path)
     return genome_obj,newly_named_genes           
            
@@ -491,7 +498,7 @@ def parse_arguments():
     parse_group.add_argument('--run_prodigal',help='set how and whether to run prodigal (default: tries to annotate .fna files if .gbk files are missing)',\
                              choices=['auto','never','always'],dest='run_prodigal')
                              
-    parse_group.add_argument('-p','--pseudo',help='Toggles the detection of pseudo genes (default on)',action='store_false')
+    parse_group.add_argument('--no_pseudo',help="Don't parse pseudo genes",action='store_false', dest='pseudo')
     parse_group.add_argument('--load_pickles', help='instead of parsing files, load previously parsed pickles (use if parsing was done before)',action='store_true',default=False)
     download_group.add_argument('--store_cog',help='Stores the COG data seperately',\
                                               default=False,action='store_true')
@@ -554,7 +561,6 @@ if __name__ == '__main__':
     t_start = time.time()
     
     settings,args = parse_arguments()
-    
     name = settings['name']
     base_path = os.path.abspath(os.path.join(settings['outputfolder'], name) + os.sep)
     
@@ -582,7 +588,7 @@ if __name__ == '__main__':
                  pickle = pickle_path,
                  )
     settings['paths'] = paths
-    
+
     # Preparing the folders if necessary
     present_folder = os.listdir(base_path)
     required_folders = ['Genomes','COG']
@@ -725,7 +731,6 @@ if __name__ == '__main__':
         genome_dict, newly_named_genes = gbk_parser(settings, genome_seqs, gene_names, scaf_names, files_parsed, genome_acc_to_name)
         
         logger.debug('Renamed %s genes\n' %(newly_named_genes))
-        
         logger.info('Analysing smORFs and assigning SVM score\n')
         genome_dict,failed = sm.smorfs_operator(settings, genome_dict)
         t_sa_start = time.time()

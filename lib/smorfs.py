@@ -154,12 +154,12 @@ def parse_hits(hit_smorfs,genome_dict,genome,smorf_name):
     return(genome_dict)
     
 # Functions to find small CDS in (intergenic) sequences
-def smorfs_main(seq,pos_adj=0):
+def smorfs_main(seq, smorf_settings, pos_adj=0):
     #print('smORFs forward')
-    smorfs_for = get_smorfs(seq,table)
+    smorfs_for = get_smorfs(seq, table, maxlen = smorf_settings['max_len'], minlen = smorf_settings['min_len'], strand = '+')
     #print('smORFs reverse')
     seq_rc = rev_comp(seq)
-    smorfs_rev = get_smorfs(seq_rc,table,strand = '-')
+    smorfs_rev = get_smorfs(seq_rc, table, maxlen = smorf_settings['max_len'], minlen = smorf_settings['min_len'], strand = '-')
     #print('Mirror coordinates on rev. comp. smorfs')
     smorfs_rev_adj = mirror_coordinates(smorfs_rev,len(seq))
     allsmorfs = smorfs_for + smorfs_rev_adj
@@ -185,7 +185,7 @@ def get_smorfs(seq,table,maxlen = 100,minlen = 5,strand = '+'):
     dna_maxlen = 3*maxlen
     for i in startpoints:
         aa_seq = 'M'
-        if len(seq)-i < dna_maxlen:
+        if len(seq)-i <= dna_maxlen:
             upper = len(seq)-1
         else:
             upper = i+dna_maxlen
@@ -197,7 +197,7 @@ def get_smorfs(seq,table,maxlen = 100,minlen = 5,strand = '+'):
                 else:
                     break
                 if aa == 'STOP':
-                    if len(aa_seq) > minlen:
+                    if len(aa_seq) >= minlen:
                         aa_seq += '*'
                         dnaseq = seq[i:j+3]
                         all_aa.append((i,j+3,strand,len(aa_seq)-1,dnaseq,aa_seq))
