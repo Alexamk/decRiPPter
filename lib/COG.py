@@ -595,13 +595,14 @@ def bottomup_groups(genomes,truecog_pairs_per_genome,true_pair_dict,genome_dict,
     current_iter = 0
     add_method = settings['cog_addmethod']
     seedmethod = settings['cog_seedmethod']
+    min_iter = settings['cog_bottomsup_miniter']
     genomes_left_to_analyze = genomes[:]
         
-    while genomes_left_to_analyze != []:
+    while genomes_left_to_analyze != [] :
         current_iter += 1
         
         if seedmethod == 'total': # Try formation with all groups
-            genome = genomes_left_to_analyze[0]
+            genome = random.choice(genomes_left_to_analyze)
             genomes_left_to_analyze = genomes_left_to_analyze[1:]
         elif seedmethod == 'smart':
             # Prioritize formation with genomes for which no group was found yet
@@ -616,7 +617,7 @@ def bottomup_groups(genomes,truecog_pairs_per_genome,true_pair_dict,genome_dict,
                         smallest = largest_group_per_genome[genome]
                 genome = smallest_group_genome
             else:
-                genome = genomes_left_to_analyze[0]
+                genome = random.choice(genomes_left_to_analyze)
         
         
         
