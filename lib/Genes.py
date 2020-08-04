@@ -15,7 +15,7 @@
 from collections import OrderedDict
 import numpy as np
 
-from lib import Container, Edge
+from lib import Container, Edge, rev_comp
 from log import return_logger
 
 logger = return_logger(__name__, False)
@@ -652,11 +652,15 @@ class Gene(object):
 
     def get_seq(self,reference_obj=False,seq=False):
         if seq:
-            return(seq[self.start:self.end])
-        elif type(self.scaffold) == str and reference_obj:
-            scaffold = reference_obj[self.scaffold]
+            base_seq = seq[self.start:self.end]
         else:
-            scaffold = self.scaffold
-        return scaffold.seq[self.start:self.end]
+            if type(self.scaffold) == str and reference_obj:
+                scaffold = reference_obj[self.scaffold]
+            else:
+                scaffold = self.scaffold
+            base_seq = scaffold.seq[self.start:self.end]
+        if self.strand == '-'
+            base_seq = rev_comp(base_seq)
+        return base_seq
 
 
