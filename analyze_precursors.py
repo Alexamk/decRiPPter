@@ -100,7 +100,7 @@ if __name__ == '__main__':
         outfile = os.path.join(settings['outputfolder'], 'STDIN_decRiPPter_precursor_prediction.txt')
     else:
         basename = os.path.basename(settings['input']).rpartition('.')[2]
-        outfile = os.path.join(settings['outputfolder'],'%s_decRiPPter_precursor_prediction.txt')
+        outfile = os.path.join(settings['outputfolder'],'%s_decRiPPter_precursor_prediction.txt' %basename)
     check_args(settings, SVM_files)
     print('Loading models')
     SVM3, SVM4, SVMr = load_pickles(settings, SVM_files)
