@@ -956,7 +956,7 @@ def main(path,allvallfile,name,settings,genome_dict,genomes_allowed=False):
             # For now, get the data for each genome in each of the groups
             # In the case of bottomup_total option, two more options arise
             # a) Use the largest group of each genome, and compare with that group (i.e. process within this code block)
-            # b) Use all the information - given a genome, compare all genes in that genome two other genomes, even if they are from different groups
+            # b) Use all the information - given a genome, compare all genes in that genome to other genomes, even if they are from different groups
             # b) is used here for now; optionally add an option to allow a user to choose.
             cog_synopsis(cog_output,genome_dict,group_stats_file,gene_stats_file,genomes_covered_per_genome)
     
