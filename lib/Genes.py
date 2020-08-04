@@ -659,7 +659,7 @@ class Gene(object):
             else:
                 scaffold = self.scaffold
             base_seq = scaffold.seq[self.start:self.end]
-        if self.strand == '-'
+        if self.strand == '-':
             base_seq = rev_comp(base_seq)
         return base_seq
 
