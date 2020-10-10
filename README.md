@@ -8,8 +8,7 @@ Preprint: https://biorxiv.org/cgi/content/short/2020.05.19.104752v1
 
 Sample output:
 Large scale Streptomyces analysis (1,295 genomes)
-[Mild filter] (http://www.bioinformatics.nl/~medem005/decRiPPter_mild/index.html)
-[Strict filter] (http://www.bioinformatics.nl/~medem005/decRiPPter_strict/index.html)
+https://decrippter.bioinformatics.nl/
 
 ## Description:
 
