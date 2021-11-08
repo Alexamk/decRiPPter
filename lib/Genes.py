@@ -477,6 +477,7 @@ class OperonCollection(CollectionCollection):
         # Only works for operons that are already on the same strand (operon formation; island method)
         for strand in ['+','-']:
             prev_operon = None
+            operon = None
             for operon in self.itersubset(sorted=True):
                 if prev_operon: 
                     if operon.strand == strand and prev_operon.strand == strand:
@@ -489,8 +490,9 @@ class OperonCollection(CollectionCollection):
                     operon.left_flank = None
                     operon.left_flank = None
                 prev_operon = operon
-            operon.right_flank = None
-            operon.right_dist = None
+            if operon:
+                operon.right_flank = None
+                operon.right_dist = None
             
     def clear_operon_flanks(self):
     # Remove any remaining left/right flank references
