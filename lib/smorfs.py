@@ -81,7 +81,7 @@ def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
         total = len(scanned_smorfs)
     else:
         smorfs_genome = read_smorfs(os.path.join(genome_path,'smORFs.txt'))
-        scanned_smorfs,errors,total= run_SVM(smorfs_genome,SVM3,SVM4,SVMr)
+        scanned_smorfs,total= run_SVM(smorfs_genome,SVM3,SVM4,SVMr)
         write_smorfs(scanned_smorfs,scanned_smorf_path,header=ripp_features)
     
     if os.path.isfile(filtered_smorf_path):
@@ -265,42 +265,15 @@ def read_smorfs(path,skipfirst=False,d=False,keyindex=False):
 
 # SVM running functions
 def run_SVM(smorfs, SVM3, SVM4, SVMr):
-    errors = 0
-    total = 0
-    smorfs_out = []
-    for smorf in smorfs:
-        seq = smorf[-1].rstrip('*')
-        RiPP_object = RiPP(seq)
-        RiPP_object.calculate_features()
-        features = RiPP_object.get_features()
-        m = np.array([np.array(features[1:])])
-        # --- run ML
-        try:
-            AVGS = []
-            avgs = []
-            for svm in SVM4:
-                y = SVM4[svm]['learner'].predict(m)
-                avgs.append(y)
-            pred = np.mean(avgs)
-            AVGS.append(pred)
+    total = len(smorfs)
+    seqs = [smorf[-1].rstrip('*') for smorf in smorfs]
+    features = np.array([np.array(RiPP(seq).calculate_features().get_features()[1:]) for seq in seqs])
 
-            avgs = []
-            for svm in SVM3:
-                y = SVM3[svm]['learner'].predict(m)
-                avgs.append(y)
-            pred = np.mean(avgs)
-            AVGS.append(pred)
+    # --- run ML
+    avgs4 = np.mean([SVM4[svm]['learner'].predict(features) for svm in SVM4], axis=0)
+    avgs3 = np.mean([SVM3[svm]['learner'].predict(features) for svm in SVM3], axis=0)
+    avgsr = np.mean([SVMr[svm]['learner'].predict(features) for svm in SVMr], axis=0)
 
-            avgs = []
-            for svm in SVMr:
-                y = SVMr[svm]['learner'].predict(m)
-                avgs.append(y)
-            pred = np.mean(avgs)
-            AVGS.append(pred)
-            results = tuple([str(j) for j in list(smorf[:-1])+features+AVGS+[np.mean(AVGS)]])
-            smorfs_out.append(results)
-        except ValueError: 
-            errors += 1
-        total += 1
-    return(smorfs_out,errors,total)
-
+    results = [list(smorf[:-1]) + [smorf[-1].rstrip('*')] + list(feats) + [s4, s3, sr, np.mean([s4,s3,sr])]
+               for smorf, feats, s4, s3, sr in zip(smorfs, features, avgs4, avgs3, avgsr)]
+    return results, total
