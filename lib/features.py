@@ -144,7 +144,8 @@ class RiPP:
             self.entropyratio = min(Es)
         except:
             raise ValueError('Error with min(Es) on smORF with sequence %s' %self.sequence)
-
+        return self # for use in list comprehension
+    
     def make_list(self):
         
         aalist = ["A", "R", "N", "D", "C", "E", "Q", "G", "H", "I", "L", "K", \
