@@ -58,15 +58,14 @@ def smorfs_operator(settings, genome_dict):
     total = 0
     errors = 0
     genomes_failed = []
-    for genome, filtered_smorfs, error, nr_analyzed in results:
+    for genome, filtered_smorfs, nr_analyzed in results:
         logger.debug('Genome %s: Parsing %s hits' %(genome,len(filtered_smorfs)))
         try:
             genome_dict = parse_hits(filtered_smorfs,genome_dict,genome,smorf_name)
         except:
             genomes_failed.append(genome)
-        errors += error
         total += nr_analyzed
-    logger.info('Finished smORF SVM scoring. %i out %i gave errors' %(errors, total))
+    logger.info('Finished smORF SVM scoring for %i candidates' %(total))
     return(genome_dict, genomes_failed)
     
 def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
