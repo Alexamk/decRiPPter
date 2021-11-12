@@ -71,7 +71,7 @@ def download_genomes_ftp(ftp,prodigal,accessions,acc2data,dest_path,downloaded=[
                     # No data - no download
                     downloaded.append(acc)
                     continue
-                folder = acc2data[acc][3][20:]
+                folder = acc2data[acc][3].partition('ftp.ncbi.nlm.nih.gov')[2]
                 logger.debug('cwd to ftp folder: %s' %folder)
                 ftp.cwd(folder)
                 lines = []
