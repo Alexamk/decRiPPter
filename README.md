@@ -107,6 +107,8 @@ networkx==2.2
 
 numpy==1.16.6
 
+Some issues with installing BioPython 1.76 on Python2 have been reported. If you encounter these, please try installing 1.75 or 1.74.
+
 These can be installed using the ```requirements.txt``` file
 
 ```pip install -r requirements.txt```
@@ -120,6 +122,9 @@ In addition, make sure the following executables are in your ```$PATH``` variabl
 ```hmmsearch``` (from [hmmer](http://hmmer.org/), tested V3.1b2)
 
 ```mcl``` (from the [Markov Clustering Algorithm](https://micans.org/mcl/))
+
+```muscle``` (from [MUSCLE](https://www.ebi.ac.uk/Tools/msa/muscle/))
+
 
 
 
@@ -142,7 +147,8 @@ Genome (re)annotation is built in with decRiPPter via prodigal, although it is n
 Download and install antiSMASH V5 as specified in it's own environment. 
 
 #### 3) Setup the config file:
-In the config file, let the variables ```pfam_db_path``` and ```tigrfam_db_path``` point to the Pfam and TIGRFAM databases, respectively.
+In the config file, let the variables ```pfam_db_path``` and ```tigrfam_db_path``` point to the Pfam and TIGRFAM databases, respectively. 
+When downloading genomes, taxonomy information will be downloaded. Specify a taxonomy folder for this in the config file under ```taxonomy_folder```.
 
 
 ## Usage:
