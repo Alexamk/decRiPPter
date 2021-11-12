@@ -56,7 +56,6 @@ def smorfs_operator(settings, genome_dict):
     target_args = [settings, genome_path, ripp_features, SVM3, SVM4, SVMr]
     results = operator(jobs, threads, smorfs_worker, target_args, quiet=False)
     total = 0
-    errors = 0
     genomes_failed = []
     for genome, filtered_smorfs, nr_analyzed in results:
         logger.debug('Genome %s: Parsing %s hits' %(genome,len(filtered_smorfs)))
@@ -76,7 +75,6 @@ def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
     
     if os.path.isfile(scanned_smorf_path):
         scanned_smorfs = read_smorfs(scanned_smorf_path,skipfirst=True)
-        errors = 0
         total = len(scanned_smorfs)
     else:
         smorfs_genome = read_smorfs(os.path.join(genome_path,'smORFs.txt'))
@@ -90,7 +88,7 @@ def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
         filtered_smorfs = filter_smorfs_overlap(filtered_smorfs)
         write_smorfs(filtered_smorfs,filtered_smorf_path,header=ripp_features,mult_values=False)
     
-    return(genome,filtered_smorfs,errors,total)
+    return(genome,filtered_smorfs,total)
     
 def filter_smorfs_score(smorfs,threshold=0.99,max_overlap=10):
     # Parses all the significant smORFs and sorts them per tag
