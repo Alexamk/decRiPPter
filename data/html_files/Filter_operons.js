@@ -293,15 +293,25 @@ function ChangeTableData(groups,operons) {
         res = standardDeviation(all_COGs);
         average_COG = Math.round(res[0]*100)/100;
         std_COG = Math.round(res[1]*100)/100;
+        if (isNaN(average_score)) {
+            score_text = "N\\A";
+        } else {
+            score_text = average_score + " +- " + std_score;
+        }
+        if (isNaN(average_COG)) {
+            cog_text = "N\\A";
+        } else {
+            cog_text = average_COG + " +- " + std_COG;
+        }
         // Get the relevant table row
         tr = document.getElementById(groupname);
         tds = tr.getElementsByTagName("td");
-        tds[1].innerText = average_score + " +- " + std_score;
+        tds[1].innerText = score_text;
         tds[2].innerText = operons_group.length;
         tds[3].innerText = total_mibig;
         tds[4].innerText = total_antismash;
         tds[5].innerText = total_kripp;
-        tds[6].innerText = average_COG + " +- " + std_COG;
+        tds[6].innerText = cog_text;
         tds[7].innerText = total_filtered;
         
     }
