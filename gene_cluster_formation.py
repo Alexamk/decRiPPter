@@ -485,7 +485,7 @@ def store_operons(operons,genome_dict,path,name):
         start_active = False
     y,m,d = time.gmtime()[0:3]
     time_operons = '%s.%s.%s' %(d,m,y)
-    pfile = open(os.path.join(path, '%s_%s.pkl' %(name,time_operons)),'w')
+    pfile = open(os.path.join(path, 'all_operons_fused_%s_%s.pkl' %(name,time_operons)),'w')
     pickle.dump(operons,pfile)
     pfile.close()  
     if start_active:
@@ -905,6 +905,7 @@ def build_operons(genome_dict, settings, rename=True):
             store_operons(operons,genome_dict,pickle_path,name)
     else:
         operons = load_operons(pickle_path)
+        operons.switch_active()
     return operons
         
 def filter_operons(operons, settings):
