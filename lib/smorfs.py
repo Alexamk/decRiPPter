@@ -56,17 +56,15 @@ def smorfs_operator(settings, genome_dict):
     target_args = [settings, genome_path, ripp_features, SVM3, SVM4, SVMr]
     results = operator(jobs, threads, smorfs_worker, target_args, quiet=False)
     total = 0
-    errors = 0
     genomes_failed = []
-    for genome, filtered_smorfs, error, nr_analyzed in results:
+    for genome, filtered_smorfs, nr_analyzed in results:
         logger.debug('Genome %s: Parsing %s hits' %(genome,len(filtered_smorfs)))
         try:
             genome_dict = parse_hits(filtered_smorfs,genome_dict,genome,smorf_name)
         except:
             genomes_failed.append(genome)
-        errors += error
         total += nr_analyzed
-    logger.info('Finished smORF SVM scoring. %i out %i gave errors' %(errors, total))
+    logger.info('Finished smORF SVM scoring for %i candidates' %(total))
     return(genome_dict, genomes_failed)
     
 def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
@@ -77,11 +75,10 @@ def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
     
     if os.path.isfile(scanned_smorf_path):
         scanned_smorfs = read_smorfs(scanned_smorf_path,skipfirst=True)
-        errors = 0
         total = len(scanned_smorfs)
     else:
         smorfs_genome = read_smorfs(os.path.join(genome_path,'smORFs.txt'))
-        scanned_smorfs,errors,total= run_SVM(smorfs_genome,SVM3,SVM4,SVMr)
+        scanned_smorfs,total= run_SVM(smorfs_genome,SVM3,SVM4,SVMr)
         write_smorfs(scanned_smorfs,scanned_smorf_path,header=ripp_features)
     
     if os.path.isfile(filtered_smorf_path):
@@ -91,7 +88,7 @@ def smorfs_worker(genome,settings,path,ripp_features,SVM3,SVM4,SVMr):
         filtered_smorfs = filter_smorfs_overlap(filtered_smorfs)
         write_smorfs(filtered_smorfs,filtered_smorf_path,header=ripp_features,mult_values=False)
     
-    return(genome,filtered_smorfs,errors,total)
+    return(genome,filtered_smorfs,total)
     
 def filter_smorfs_score(smorfs,threshold=0.99,max_overlap=10):
     # Parses all the significant smORFs and sorts them per tag
@@ -265,42 +262,15 @@ def read_smorfs(path,skipfirst=False,d=False,keyindex=False):
 
 # SVM running functions
 def run_SVM(smorfs, SVM3, SVM4, SVMr):
-    errors = 0
-    total = 0
-    smorfs_out = []
-    for smorf in smorfs:
-        seq = smorf[-1].rstrip('*')
-        RiPP_object = RiPP(seq)
-        RiPP_object.calculate_features()
-        features = RiPP_object.get_features()
-        m = np.array([np.array(features[1:])])
-        # --- run ML
-        try:
-            AVGS = []
-            avgs = []
-            for svm in SVM4:
-                y = SVM4[svm]['learner'].predict(m)
-                avgs.append(y)
-            pred = np.mean(avgs)
-            AVGS.append(pred)
+    total = len(smorfs)
+    seqs = [smorf[-1].rstrip('*') for smorf in smorfs]
+    features = np.array([np.array(RiPP(seq).calculate_features().get_features()[1:]) for seq in seqs])
 
-            avgs = []
-            for svm in SVM3:
-                y = SVM3[svm]['learner'].predict(m)
-                avgs.append(y)
-            pred = np.mean(avgs)
-            AVGS.append(pred)
+    # --- run ML
+    avgs4 = np.mean([SVM4[svm]['learner'].predict(features) for svm in SVM4], axis=0)
+    avgs3 = np.mean([SVM3[svm]['learner'].predict(features) for svm in SVM3], axis=0)
+    avgsr = np.mean([SVMr[svm]['learner'].predict(features) for svm in SVMr], axis=0)
 
-            avgs = []
-            for svm in SVMr:
-                y = SVMr[svm]['learner'].predict(m)
-                avgs.append(y)
-            pred = np.mean(avgs)
-            AVGS.append(pred)
-            results = tuple([str(j) for j in list(smorf[:-1])+features+AVGS+[np.mean(AVGS)]])
-            smorfs_out.append(results)
-        except ValueError: 
-            errors += 1
-        total += 1
-    return(smorfs_out,errors,total)
-
+    results = [list(smorf[:-1]) + [smorf[-1].rstrip('*')] + list(feats) + [s4, s3, sr, np.mean([s4,s3,sr])]
+               for smorf, feats, s4, s3, sr in zip(smorfs, features, avgs4, avgs3, avgsr)]
+    return results, total
