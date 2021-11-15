@@ -508,7 +508,7 @@ def parse_arguments():
     split_group = parser.add_argument_group('BLAST/COG preparation option')
     split_group.add_argument('--skip_blast',help=argparse.SUPPRESS,choices=[True,False,'auto'])
     split_group.add_argument('--max_proteins',help=argparse.SUPPRESS,type=int)
-    split_group.add_argument('--min_group_size',help=argparse.SUPPRESS,type=int)
+    split_group.add_argument('--cog_min_group_size',help=argparse.SUPPRESS,type=int)
     split_group.add_argument('--split_genomes', help=argparse.SUPPRESS, choices=['random','load']) 
 
     args = parser.parse_args()
