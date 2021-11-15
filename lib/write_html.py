@@ -60,7 +60,11 @@ def write_index(settings,operons,collections_by_type,headers,domain_descr,genome
             nr_antismash = len([op for op in collection if hasattr(op,'overlaps_antismash') and op.overlaps_antismash != {}])
             nr_kripp = len([op for op in collection if len(op.kripp) > 0])
             scores = [op.score for op in collection if hasattr(op,'score')]
-            score_text = '%.2f +- %.2f' %(np.average(scores),np.std(scores))
+            if len(scores) > 0:
+                score_text = '%.2f +- %.2f' %(np.average(scores),np.std(scores))
+            else:
+                score_text = 'N\A'
+            
             if domain_text != '<p>No common domains found</p>':
                 domain_text = '''%i<br><button class="collapsible">Show domains</button>
             <div class="content">
