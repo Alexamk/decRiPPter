@@ -520,7 +520,7 @@ def make_collections_per_genomes(operons,genome_dict):
         for operon in operons.itersubset(genome=genome):
             operons_genome[operon.name] = operon
         operon_coll = OperonCollection(operons_genome,name='operons_genome_%s' %genome.name, descr='Grouped by genome', \
-                                       collection_type='genome',realname=genome.descr,active=True)
+                                       collection_type='genome',realname=genome.descr,active=True,prep=False)
         collections_per_genome[genome.name] = operon_coll
     return collections_per_genome
     
