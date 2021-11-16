@@ -55,7 +55,7 @@ def assign_groups_to_operons(operons,categories_domains):
     for category in operons_per_category:
         operons_group = operons_per_category[category]
         collection = OperonCollection(dict([(operon.name,operon) for operon in operons_group]),collection_type='EC',name=category,\
-                                      descr='Operons containing a common enzyme class')
+                                      descr='Operons containing a common enzyme class',prep=False)
         collections_per_group[category] = collection
     return collections_per_group
     
